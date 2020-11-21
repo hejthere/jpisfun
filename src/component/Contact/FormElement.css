@@ -1,0 +1,27 @@
+.inputElement { 
+font-size:1.2rem;
+margin: 1rem;
+text-align: left;
+}
+
+.inputElement:focus{ 
+background-color: gainsboro;
+}
+
+.Invalid { 
+    background-color: salmon;
+}
+
+label{
+font-size: 1.25rem;
+padding: 1.5rem;
+align-self: right;
+}
+
+form{ 
+margin: auto;
+width: 800px;
+display:block; 
+align-items: center;
+border:5px solid var(--blue); 
+}

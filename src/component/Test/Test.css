@@ -1,0 +1,51 @@
+/* Test your knowledge */
+
+div.introduction { 
+    background-color:#551800;
+      height:20vh;
+   } 
+  
+  p.introduction { 
+  color: white; 
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold; 
+  display: inline-block;
+  vertical-align: middle;
+  width: 500px;
+  }
+
+  img.introduction {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  #Question {
+   font-size: 2rem; 
+   text-align: center;
+   padding: 2rem; 
+   background-color:black;
+   color: white;
+   } 
+   
+  .Answer {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+   font-size: 2rem; 
+   text-align: center;
+   visibility: hidden;
+   color: black;
+   } 
+  
+  .col-3 { 
+      float:left;
+  }
+  
+  .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
