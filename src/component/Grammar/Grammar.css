@@ -6,3 +6,16 @@
          -moz-user-select: none;
           -ms-user-select: none;
             user-select: none;}
+
+
+.description{ 
+text-align: left;
+font-size: 1.5rem;
+color: var(--blue);
+
+}
+
+#momotaro { 
+text-align: left;
+font-size: 1.5rem;
+}

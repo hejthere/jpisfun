@@ -42,12 +42,13 @@ showTranslationHandler =()=> {
 render () {
 
 return (
-<div>
+<div >
+    <p className='description'>
     Do you know which particle should be used in the following article ?
-    Point to the brankets to view the answer. 
+    Click the space to view the answer. </p><br />
 
-<div id='momotaro' style={{fontSize:'2rem'}}>
-    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、共に鬼退治に挑むお話です。
+<div id='momotaro' >
+    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、<br />村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。<br />道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、<br />共に鬼退治に挑むお話です。
 </div>
 
 

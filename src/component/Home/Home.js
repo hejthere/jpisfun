@@ -12,11 +12,11 @@ return (
 <div>
 <section className="menu"> 
 <div className="col-4 greetings" style={{ backgroundColor:'#496D89'}} >
-	<a  className="picturelink" href='/'>
+	<a  className="picturelink" href='./test'>
 		<img className="subpagelink" src={Greeting} alt='greeting' /> <p className="subpagelinkword"> &nbsp; Greetings </p> </a>
  </div>
  <div className="col-4 diseases" style={{ backgroundColor:'#ffcc00'}}>
-	<a className="picturelink" href="/">
+	<a className="picturelink" href='/VocabDiseases'>
 		<img className="subpagelink" src ={disease} alt='disease'/> <p className="subpagelinkword"> &nbsp; Diseases </p></a>
  </div>
 <div className="col-4 food" style={{ backgroundColor:'#aa5939'}}> 
@@ -37,7 +37,7 @@ return (
 
 {/* /* <!-- Japanese Vocab --> */ }
 
-<div className="homepage-japan-vocab row">
+<div className="homepage-japan-vocab">
 	<div>
 	<h2> Japanese Vocaburary </h2>
 	<span> Learn Daily Japanese Vocaburary with Exercise and Audio. </span><br/><br/>

@@ -61,60 +61,6 @@ button:hover::after {
 a { text-decoration:none; 
 	color: inherit;}
 
-/* Nav Bar  */
-.navbar {
- max-width : 1280px; 
-position:fixed;
-display:flex;   
-background-color: rgba(0,0,0,0.7);
-color:white; 
-top: 0;
-z-index: 100;
-font-size: 1.2rem;
-width:100%;
-flex: 1; 
-}
-
-nav ul {
-display: flex;
-list-style-type: none;
-flex:auto;
-}
-
-nav ul li {
-flex: auto; }
-
-nav li {
-  padding: 0.3rem 0rem; 
-  color:white;
-	}
-
-li:hover, .is-active{
-    padding: 0.3rem 0rem; 
-	background-color:white;
-    color:black;
-    }
-
-
-/* Banner */
-
-.bannertext { 
-  font-size: 3rem; 
-  position: absolute; 
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-  color:navy;
-}
-
-.bannerContainer { 
-  position: relative; 
-  height: 50%;
-}
-
-.banner { 
-opacity: 0.6;
-}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}

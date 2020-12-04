@@ -5,6 +5,21 @@ class Contact extends Component {
 
 state={
     contactform: { 
+       Title:{ 
+            elementType: 'select',
+            elementConfig: { 
+            options: [ 
+                {value: 'Mr.', displayValue: 'Mr.'},
+                {value: 'Ms.', displayValue: 'Ms.'},
+                {value: 'Mrs.', displayValue: 'Mrs.'}
+                ]},
+            value: '',
+            validation: {
+                required: true, 
+
+            },
+            isValid: false} ,
+
         Name:{ 
             elementType: 'input',
             elementConfig: { 
@@ -14,6 +29,7 @@ state={
             value: '',
             validation: {
                 required: true, 
+
             },
             isValid: false,
 
@@ -24,7 +40,10 @@ state={
                 type:'email',
                 placeholder:'Your email'
             },
-            value: ''
+            value: '',
+            validation: {
+                required: true, 
+            }
         },  
         Message:{ 
             elementType: 'input',
@@ -32,7 +51,10 @@ state={
                 type:'input',
                 placeholder:'Your Message'
             },
-            value: ''
+            value: '',
+            validation: {
+                required: true, 
+            },
     }
 
     
@@ -66,7 +88,7 @@ return isValid     //** need to return sth !
 
 
 
-render () {
+render () { 
     const contactfromArray =[]; 
     for (let key in this.state.contactform) { 
         contactfromArray.push({
@@ -91,10 +113,13 @@ let contactform = (
     change ={(event)=> this.onChangeHandler(event,formelement.id)}
     />))}
     <button>Submit</button>
-    </form> )
+    </form>
+     )
 
 return ( 
     <div> 
+    <p id='message'>Please feel free to contact us through the message form below. 
+    </p>
     {contactform}
     </div>
  ) 

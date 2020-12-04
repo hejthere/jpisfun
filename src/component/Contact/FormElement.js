@@ -28,6 +28,20 @@ const FormElement = props => {
         onChange={props.change}
         > 
         </input>; 
+        break;
+
+        case 'select' : 
+        formElement = (
+        <select 
+        className = {elementClass.join('')}
+        value = {props.value}
+        onChange={props.change}>
+        {props.elementConfig.options.map(option => (
+        <option value={option.value} key={option.value}> 
+        {option.displayValue}
+        </option>
+        ))} 
+        </select>);
         break; 
 
         case 'textarea' : 
@@ -40,23 +54,12 @@ const FormElement = props => {
         </textarea>; 
         break; 
         
-        case 'select': 
-        formElement = <select
-        value={props.value}
-        {...props.elementConfig} >
-        <option> </option>
-        </select>
-        break; 
-        
-        default : 
-        case 'input' : 
+        default: 
         formElement = <input 
         value={props.value}
         {...props.elementConfig}   //to be set in form element obj later 
         > 
         </input>;   
-
-
     }
 
     return (

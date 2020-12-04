@@ -2,7 +2,7 @@
 
 div.introduction { 
     background-color:#551800;
-      height:20vh;
+      height:100px;
    } 
   
   p.introduction { 
@@ -40,12 +40,18 @@ div.introduction {
    color: black;
    } 
   
-  .col-3 { 
-      float:left;
-  }
   
   .row::after {
       content: "";
       clear: both;
       display: table;
     }
+
+  .row{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: 50% 50%;
+    max-width:1280px;
+
+
+  }
