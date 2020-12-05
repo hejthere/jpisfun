@@ -10,9 +10,11 @@ import Contact from './component/Contact/Contact'
 import Bannerword from './component/Home/Bannerword';
 import VocabDiseases from './component/Vocaburary/VocabDiseases';
 import OtherResources from './Resources/OtherResources';
+import RandomQuote from './component/Vocaburary/RandomQuote';
 
 
 class App extends Component {
+  
   render () {
   
    let bannertext =''; 
@@ -21,7 +23,7 @@ class App extends Component {
         break;
       case'/jpisfun/test': bannertext = <Bannerword title="Test Your Knowledge"></Bannerword>
         break;
-      case'/jpisfun/resources': bannertext = <Bannerword title="Other Resources"></Bannerword>
+      case'/jpisfun/resources': bannertext = <Bannerword title="Resources"></Bannerword>
         break;
       case'/jpisfun/grammar': bannertext = <Bannerword title="Grammar Practice"></Bannerword>
         break;
@@ -40,7 +42,7 @@ class App extends Component {
 		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/' exact>Home</NavLink> </li>
 		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/test' >Test Your Knowledge</NavLink></li>  
     <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/grammar'>Grammar Practice</NavLink> </li>
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/resources' >Other Resources</NavLink>  </li>
+		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/resources' >Resources</NavLink>  </li>
     <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/contactus'>Contact Us</NavLink> </li>
 		</ul>
      </nav>
@@ -48,7 +50,7 @@ class App extends Component {
 
   <div className="bannerContainer"> 
   <img className="banner" src={Background} alt='background' />  
-  {bannertext} 
+  {bannertext}  
    </div>
   
   <Switch>
@@ -57,7 +59,8 @@ class App extends Component {
   <Route path="/grammar" exact component={Grammar} /> 
   <Route path="/vocabdiseases" exact component={VocabDiseases} />
   <Route path="/resources" exact component={OtherResources} />  
-  <Route path ="/contactus" exact component={Contact} /> 
+  <Route path="/contactus" exact component={Contact} /> 
+  <Route path="/quotes" exact component={RandomQuote} />
   </Switch> 
 
    </div>

@@ -4,9 +4,9 @@ import VideoButton from './VideoButton';
 class OtherResources extends Component { 
 state = { 
 video: [
-{id:'video1', title:'abc1', Url:'https://www.youtube.com/embed/zhQGGLvWftQ' }, 
-{id:'video2', title:'abc2', Url:'https://www.youtube.com/embed/CYFKL_ta7rA' }, 
-{id:'video3', title:'abc3', Url:'https://www.youtube.com/embed/4atMVVR0dNE'  }
+{id:'video1', title:'Mr. Yabatan - Daily Life in Japanese', Url:'https://www.youtube.com/embed/zhQGGLvWftQ' }, 
+{id:'video2', title:'Ryuu TV - Daily Conversation', Url:'https://www.youtube.com/embed/orcdcRp3vIw' }, 
+{id:'video3', title:'Dogen - Japanese Comedic Lessons', Url:'https://www.youtube.com/embed/ucqMh9iYpTo'  }
 ],
 selectedVideo:'', 
 showVideo: false
@@ -40,7 +40,8 @@ return (
 {playButton}
 <br />
 {videoFrame}
-
+<br />
+<br />
 </div> 
 
  

@@ -16,12 +16,12 @@ return (
 		<img className="subpagelink" src={Greeting} alt='greeting' /> <p className="subpagelinkword"> &nbsp; Greetings </p> </a>
  </div>
  <div className="col-4 diseases" style={{ backgroundColor:'#ffcc00'}}>
-	<a className="picturelink" href='/VocabDiseases'>
+	<a className="picturelink" href='./VocabDiseases'>
 		<img className="subpagelink" src ={disease} alt='disease'/> <p className="subpagelinkword"> &nbsp; Diseases </p></a>
  </div>
 <div className="col-4 food" style={{ backgroundColor:'#aa5939'}}> 
-	<a  className="picturelink" href='/'>
-		<img src ={food} className="subpagelink" alt='food' /> <p className="subpagelinkword"> &nbsp; Food </p> </a>
+	<a  className="picturelink" href='./quotes'>
+		<img src ={food} className="subpagelink" alt='food' /> <p className="subpagelinkword"> &nbsp; Quotes </p> </a>
 </div>
 </section>
 
