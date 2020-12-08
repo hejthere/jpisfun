@@ -98,8 +98,6 @@ render () {
     }
 
 
-
-
 let contactform = (
     <form>
     {contactfromArray.map( formelement=> (
@@ -109,16 +107,18 @@ let contactform = (
     label={formelement.id}
     elementType={formelement.value.elementType}
     value={formelement.value.value}
-    invalid={formelement.value.isValid}
+    invalid={formelement.value.isValid} 
     change ={(event)=> this.onChangeHandler(event,formelement.id)}
     />))}
-    <button>Submit</button>
+    <br/>
+    <button className="submitButton">Submit</button>
+    <br/>
     </form>
      )
 
 return ( 
     <div> 
-    <p id='message'>Please feel free to contact us through the message form below. 
+    <p id='message'>Contact us through this message form.
     </p>
     {contactform}
     </div>

@@ -65,9 +65,8 @@ const FormElement = props => {
     return (
         <div className>
         <label>{props.label}</label>
-            {formElement}
+        {formElement}
         </div>
-
     )
 
 }

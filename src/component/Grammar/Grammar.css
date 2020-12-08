@@ -11,7 +11,8 @@
 .description{ 
 text-align: left;
 font-size: 1.5rem;
-color: var(--blue);
+background-color: var(--blue);
+color: white;
 
 }
 
@@ -19,3 +20,8 @@ color: var(--blue);
 text-align: left;
 font-size: 1.5rem;
 }
+
+#translation { 
+font-size:1.5rem;
+text-align: left;
+padding:0.5rem;}

@@ -11,7 +11,8 @@ import Bannerword from './component/Home/Bannerword';
 import VocabDiseases from './component/Vocaburary/VocabDiseases';
 import OtherResources from './Resources/OtherResources';
 import RandomQuote from './component/Vocaburary/RandomQuote';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons'; 
 
 class App extends Component {
   
@@ -39,11 +40,11 @@ class App extends Component {
    <header> 
      <nav className="navbar">
 		<ul> 
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/' exact>Home</NavLink> </li>
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/test' >Test Your Knowledge</NavLink></li>  
-    <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/grammar'>Grammar Practice</NavLink> </li>
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/resources' >Resources</NavLink>  </li>
-    <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/contactus'>Contact Us</NavLink> </li>
+		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/' exact><FontAwesomeIcon icon={faIgloo} /> Home</NavLink> </li>
+		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/test' ><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</NavLink></li>  
+    <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/grammar'><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</NavLink> </li>
+		<li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</NavLink>  </li>
+    <li> <NavLink activeClassName='is-active' activeStyle={{color:'black'}}to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</NavLink> </li>
 		</ul>
      </nav>
    </header>

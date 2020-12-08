@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap');
 *{
 	box-sizing: border-box;
 	margin:0;
@@ -12,12 +13,13 @@
 body {
   max-width:1280px;
   min-width: fit-content;
-  font-family: sans-serif;
+  font-family:'M PLUS Rounded 1c', sans-serif ;
   text-align: center;
   align-items: center;
 }
 
 button {
+	font-family:'M PLUS Rounded 1c', sans-serif;
 	margin: 0px 0px 10px 10px;
 	color: var(--blue);
 	position: relative;
@@ -35,7 +37,7 @@ button {
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;}
+	}
 	
 button::after {
 	  content: '';

@@ -44,7 +44,7 @@ render () {
 return (
 <div >
     <p className='description'>
-    Do you know which particle should be used in the following article ?
+    Do you know which particle should be used in the following article ?<br />
     Click the space to view the answer. </p><br />
 
 <div id='momotaro' >
@@ -57,7 +57,7 @@ return (
 {/* <script src="External_file/voiceRSS.js"></script>  */}
 <button onClick={this.showTranslationHandler}>See Translation</button> 
 <div id='translation'></div>
-
+<br/> 
 </div>
 
 )}
