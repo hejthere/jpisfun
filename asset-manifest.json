@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jpisfun/static/css/main.fb28a188.chunk.css",
-    "main.js": "/jpisfun/static/js/main.32e491be.chunk.js",
-    "main.js.map": "/jpisfun/static/js/main.32e491be.chunk.js.map",
+    "main.css": "/jpisfun/static/css/main.254f88ca.chunk.css",
+    "main.js": "/jpisfun/static/js/main.e9dbfc03.chunk.js",
+    "main.js.map": "/jpisfun/static/js/main.e9dbfc03.chunk.js.map",
     "runtime-main.js": "/jpisfun/static/js/runtime-main.44e843be.js",
     "runtime-main.js.map": "/jpisfun/static/js/runtime-main.44e843be.js.map",
-    "static/js/2.e6b55ca9.chunk.js": "/jpisfun/static/js/2.e6b55ca9.chunk.js",
-    "static/js/2.e6b55ca9.chunk.js.map": "/jpisfun/static/js/2.e6b55ca9.chunk.js.map",
+    "static/js/2.9ffa4d55.chunk.js": "/jpisfun/static/js/2.9ffa4d55.chunk.js",
+    "static/js/2.9ffa4d55.chunk.js.map": "/jpisfun/static/js/2.9ffa4d55.chunk.js.map",
     "index.html": "/jpisfun/index.html",
-    "static/css/main.fb28a188.chunk.css.map": "/jpisfun/static/css/main.fb28a188.chunk.css.map",
-    "static/js/2.e6b55ca9.chunk.js.LICENSE.txt": "/jpisfun/static/js/2.e6b55ca9.chunk.js.LICENSE.txt",
+    "static/css/main.254f88ca.chunk.css.map": "/jpisfun/static/css/main.254f88ca.chunk.css.map",
+    "static/js/2.9ffa4d55.chunk.js.LICENSE.txt": "/jpisfun/static/js/2.9ffa4d55.chunk.js.LICENSE.txt",
     "static/media/Background.bd3d8925.jpg": "/jpisfun/static/media/Background.bd3d8925.jpg",
     "static/media/daruma.bb00d9a4.png": "/jpisfun/static/media/daruma.bb00d9a4.png",
     "static/media/disease.4e707974.png": "/jpisfun/static/media/disease.4e707974.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.44e843be.js",
-    "static/js/2.e6b55ca9.chunk.js",
-    "static/css/main.fb28a188.chunk.css",
-    "static/js/main.32e491be.chunk.js"
+    "static/js/2.9ffa4d55.chunk.js",
+    "static/css/main.254f88ca.chunk.css",
+    "static/js/main.e9dbfc03.chunk.js"
   ]
 }
