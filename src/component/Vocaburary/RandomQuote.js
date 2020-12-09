@@ -16,7 +16,7 @@ quotes: [
 { id:'9', japanese:'僕はもう十分逃げた。ようやく守らなければならないものが分かったんだんだ。君だ。　' , english: 'I’m through running away. I’ve finally found someone I want to protect…YOU.' , author:'ハウル-ハウルの動く城'},
 { id:'10', japanese:'生きてりゃ何とかなる' , english: 'As long as we’re alive, we’ll manage.' , author:'トキ-もののけ姫'}]
 ,
-generatedQuote: {id:'', japanese:'' , english: '' , author:''}
+generatedQuote: {id:'', japanese:'Get Your Quotes of Today' , english: '' , author:''}
 }
 
 generateQuoteHandler =()=> {
@@ -36,13 +36,15 @@ render() {
 
 return( 
 <div> 
-<button onClick={this.generateQuoteHandler}>Quotes of Today</button>
 <div class='quotebox'> 
 <p class='japanesequote'>{this.state.generatedQuote.japanese}</p>
 <p class='englishquote'>{this.state.generatedQuote.english}</p>
 <br/>
 <p class='authorquote'>{this.state.generatedQuote.author}</p>
 </div>
+<br /> 
+<button onClick={this.generateQuoteHandler}>Start</button> 
+<button>Save Quote</button>
 <br/> 
 <br/>
 </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import './Grammar.css'
+import momotato from '../../Picture/momotaro.png';
 
 
 
@@ -44,12 +45,13 @@ render () {
 return (
 <div >
     <p className='description'>
-    Do you know which particle should be used in the following article ?<br />
+    Do you know which particle should be used in the following article ?
     Click the space to view the answer. </p><br />
 
+<div id='momotaro-container'>
 <div id='momotaro' >
-    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、<br />村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。<br />道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、<br />共に鬼退治に挑むお話です。
-</div>
+    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、<br />村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。<br />道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、<br />共に鬼退治に挑むお話です。<br /><br /><br />
+<img className='momotaro-pic' src={momotato} alt='momotaro' /></div></div>
 
 
 <button onClick={this.readOutLoudHandler}>Listen</button>

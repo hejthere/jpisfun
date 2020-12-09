@@ -5,7 +5,7 @@ const FormElement = props => {
 
     let formElement = null; 
     const elementClass = ['inputElement']; 
-    if (!props.invalid) { 
+    if (!props.invalid && props.touched) { 
         elementClass.push('Invalid');
         console.log(elementClass.join(' '))
     }
@@ -63,7 +63,7 @@ const FormElement = props => {
     }
 
     return (
-        <div className>
+        <div>
         <label>{props.label}</label>
         {formElement}
         </div>

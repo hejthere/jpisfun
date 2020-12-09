@@ -1,8 +1,8 @@
 
 /* Nav Bar  */
 .navbar {
-
-  width: 100%; 
+  width: 1280px;
+  max-width: 1280px; 
   position:fixed;
   display:flex;   
   background-color: rgba(0,0,0,0.7);
@@ -20,39 +20,19 @@
   }
   
   nav ul li {
-  flex: auto; }
+  flex: auto;
+  border-left: white solid 1.5px ;
+   }
   
-  nav li {
-    padding: 0.3rem 0rem; 
-    color:white;
-    }
-  
-  li:hover, .is-active{
-      padding: 0.3rem 0rem; 
+   nav ul li:first-child {
+    flex: auto;
+    border-left: white solid 0px ;
+     }
+ 
+  li:hover{ 
       background-color:white;
       color:black;
       }
-  
-  
-  /* Banner */
-  
-  .bannertext { 
-    font-size: 3rem; 
-    position: absolute; 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-    color: var(--blue);
-  }
-  
-  .bannerContainer { 
-    position: relative; 
-    height: 50%;
-  }
-  
-  .banner { 
-  opacity: 0.6;
-  }
 
 
 .App {

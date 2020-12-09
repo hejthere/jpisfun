@@ -32,6 +32,7 @@ state={
 
             },
             isValid: false,
+            touched: false,
 
         },
         Email:{ 
@@ -43,7 +44,8 @@ state={
             value: '',
             validation: {
                 required: true, 
-            }
+            
+            },touched: false,
         },  
         Message:{ 
             elementType: 'input',
@@ -54,7 +56,8 @@ state={
             value: '',
             validation: {
                 required: true, 
-            },
+            
+            }, touched: false,
     }
 
     
@@ -69,6 +72,7 @@ onChangeHandler =(event, keyname)=>  {
     }
     updatedFormElement.value = event.target.value;
     updatedFormElement.isValid = this.checkValidity(updatedFormElement.value,updatedFormElement.validation); 
+    updatedFormElement.touched = true;
 
     updatedForm[keyname] = updatedFormElement; 
     console.log(updatedFormElement);
@@ -86,6 +90,9 @@ if (rules.required) {     //= true
 return isValid     //** need to return sth ! 
 }
 
+submitHandler =(e) => {
+e.preventDefault(); 
+alert('Thank you for your message. We will contact you soon!')}
 
 
 render () { 
@@ -109,9 +116,10 @@ let contactform = (
     value={formelement.value.value}
     invalid={formelement.value.isValid} 
     change ={(event)=> this.onChangeHandler(event,formelement.id)}
+    touched={formelement.value.touched}
     />))}
     <br/>
-    <button className="submitButton">Submit</button>
+    <button onClick={this.submitHandler} className="submitButton">Submit</button>
     <br/>
     </form>
      )

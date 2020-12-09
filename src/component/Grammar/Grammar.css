@@ -19,9 +19,23 @@ color: white;
 #momotaro { 
 text-align: left;
 font-size: 1.5rem;
+padding: 50px 50px 100px 100px;
 }
 
 #translation { 
 font-size:1.5rem;
 text-align: left;
 padding:0.5rem;}
+
+.momotaro-pic {
+width: 300px;
+position: absolute;
+right:150px;
+top:0; 
+}
+
+#momotaro-container { 
+width: 1200px; 
+position: relative;
+height: 300px;
+}

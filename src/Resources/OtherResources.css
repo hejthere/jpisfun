@@ -1,5 +1,19 @@
 .introductionResource{ 
     font-size: 1.5rem;
     color: var(--red);
+    text-align: left;
+    padding: 10px 40px ;
+}
 
+.video-button-container {
+    width: 600px;
+    padding: 10px;
+
+}
+
+.video-button{ 
+    float: left;
+    display:block;
+    white-space: pre-line;
+    margin: 10px 50px 10px 50px;
 }
