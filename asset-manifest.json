@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jpisfun/static/css/main.ed6d31cc.chunk.css",
-    "main.js": "/jpisfun/static/js/main.787a8a24.chunk.js",
-    "main.js.map": "/jpisfun/static/js/main.787a8a24.chunk.js.map",
+    "main.css": "/jpisfun/static/css/main.6def1527.chunk.css",
+    "main.js": "/jpisfun/static/js/main.a18ea12e.chunk.js",
+    "main.js.map": "/jpisfun/static/js/main.a18ea12e.chunk.js.map",
     "runtime-main.js": "/jpisfun/static/js/runtime-main.44e843be.js",
     "runtime-main.js.map": "/jpisfun/static/js/runtime-main.44e843be.js.map",
-    "static/js/2.2b295a49.chunk.js": "/jpisfun/static/js/2.2b295a49.chunk.js",
-    "static/js/2.2b295a49.chunk.js.map": "/jpisfun/static/js/2.2b295a49.chunk.js.map",
+    "static/js/2.4378ad3e.chunk.js": "/jpisfun/static/js/2.4378ad3e.chunk.js",
+    "static/js/2.4378ad3e.chunk.js.map": "/jpisfun/static/js/2.4378ad3e.chunk.js.map",
     "index.html": "/jpisfun/index.html",
-    "static/css/main.ed6d31cc.chunk.css.map": "/jpisfun/static/css/main.ed6d31cc.chunk.css.map",
-    "static/js/2.2b295a49.chunk.js.LICENSE.txt": "/jpisfun/static/js/2.2b295a49.chunk.js.LICENSE.txt",
+    "static/css/main.6def1527.chunk.css.map": "/jpisfun/static/css/main.6def1527.chunk.css.map",
+    "static/js/2.4378ad3e.chunk.js.LICENSE.txt": "/jpisfun/static/js/2.4378ad3e.chunk.js.LICENSE.txt",
     "static/media/Background.bd3d8925.jpg": "/jpisfun/static/media/Background.bd3d8925.jpg",
     "static/media/daruma.bb00d9a4.png": "/jpisfun/static/media/daruma.bb00d9a4.png",
     "static/media/disease.4e707974.png": "/jpisfun/static/media/disease.4e707974.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.44e843be.js",
-    "static/js/2.2b295a49.chunk.js",
-    "static/css/main.ed6d31cc.chunk.css",
-    "static/js/main.787a8a24.chunk.js"
+    "static/js/2.4378ad3e.chunk.js",
+    "static/css/main.6def1527.chunk.css",
+    "static/js/main.a18ea12e.chunk.js"
   ]
 }
