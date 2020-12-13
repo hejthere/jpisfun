@@ -7,7 +7,7 @@ return (
 
 <div className="bannerContainer"> 
 <img className="banner" src={props.backgrounds} alt='background' />
-<p className="bannertext"> よこそう</p>
+<p className="bannertext"> ようこそ</p>
 </div>
 
 )
