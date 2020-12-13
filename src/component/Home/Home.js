@@ -32,7 +32,8 @@ return (
 <div>
 <h2> For Japanese Beginners </h2>
 <span> You could learn some basic Japanese Vocaburary and Grammar Practice in this website.</span><br />
-<br /><button >MORE</button>
+<br /><Link to='/katakana'>
+	<button >MORE</button></Link>
 </div>
 </div> 
 
