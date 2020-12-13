@@ -26,8 +26,8 @@ displayAnswer: this.state.question[randomNumber].answer
 let button = document.getElementsByClassName('katakana-button');
 var i;
 for (i = 0; i < button.length; i++) {
-    button[i].style.border = "white";
-    button[i].style.color = 'var(--blue)';
+    button[i].style.border='2px solid var(--blue)';
+    button[i].style.color='var(--blue)';
 
 }
 }else{ 
