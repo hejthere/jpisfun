@@ -2,12 +2,10 @@
 
 .introduction { 
     background-color:#551800;
-      height:100px;
    } 
   
-  p.introduction { 
+  h5.introduction { 
   color: white; 
-  font-size: 1.5rem;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
@@ -20,9 +18,9 @@
   }
   
   #Question {
-   font-size: 2rem; 
+   font-size: 1.5rem; 
    text-align: center;
-   padding: 2rem;
+   padding: 1.5rem;
    background-color:black;
    color: white;
    } 
@@ -32,7 +30,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-   font-size: 2rem; 
+   font-size: 1.5rem; 
    text-align: center;
    visibility: hidden;
    color: black;

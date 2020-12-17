@@ -17,10 +17,10 @@ class Test extends React.Component
     return (
     <div>
     <Row fluid className='introduction'> 
-    <Col sm md lg={9}><p className='introduction'>
+    <Col xs={9}><h5 className='introduction'>
     Do you know how to say the following greetings in Japanese? <br />
-    Press the button to check the answer ! </p></Col>
-    <Col sm md lg={3}><Image src={teacher} className='introduction' alt='uketsuke'/></Col>
+    Press the button to check the answer ! </h5></Col>
+    <Col xs={3}><Image src={teacher} className='introduction' alt='uketsuke'/></Col>
     </Row>
 
 

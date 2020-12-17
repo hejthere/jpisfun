@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import './randomQuote.css';
 
 class RandomQuote extends Component { 
@@ -36,7 +37,8 @@ render() {
 
 
 return( 
-<div> 
+<Container>
+
 <div class='quotebox'> 
 <p class='japanesequote'>{this.state.generatedQuote.japanese}</p>
 <p class='englishquote'>{this.state.generatedQuote.english}</p>
@@ -48,7 +50,7 @@ return(
 <Button>Save Quote</Button>
 <br/> 
 <br/>
-</div>
+</Container>
 
 )
 

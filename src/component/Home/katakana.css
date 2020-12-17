@@ -1,5 +1,4 @@
 .katakana-container{ 
-
 background-color: #f0f0ee4d;
 width:150px;
 box-shadow: 3px 5px rgb(187, 184, 184);
@@ -7,7 +6,6 @@ margin: auto;
 }
 
 .katakana-question{
-
 font-size: 5rem;
 color: var(--blue);
 padding: 10px;

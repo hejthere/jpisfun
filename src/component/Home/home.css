@@ -1,8 +1,7 @@
 .menu {
 	border:0px; 
 	font-size: 200%;
-  	overflow: hidden;
-}
+  	overflow: hidden;}
 
 .subpagelink {
 	height: 6rem; 
@@ -34,11 +33,8 @@
 	justify-content: center;
 }
 
-.simple-introduction img { 
-	max-height: 30rem; 
-	width: auto;
-	height: 100%;
-
+.simple-introduction img, .homepage-japan-vocab img  { 
+	width:30vw;
 }
 
 .homepage-japan-vocab {
@@ -51,12 +47,8 @@
 
 }
 
-.homepage-japan-vocab img { 
-	max-height: 30rem; 
-	width: auto;
-	height: 100%;
 
-}
+
 
 /* banner  */
 

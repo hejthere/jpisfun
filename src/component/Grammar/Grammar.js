@@ -49,13 +49,13 @@ render () {
 
 return (
 <Container fluid>
-    <p className='description'>
+    <h5 className='description'>
     Do you know which particle should be used in the following article ?
-    Click the space to view the answer. </p><br />
+    Click the space to view the answer. </h5><br />
 
 <Row sm={1} xs={1} md={2} lg={2} id='momotaro-container'>
 <Col id='momotaro' >
-    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、<br />村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。<br />道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、<br />共に鬼退治に挑むお話です。<br /><br /><br /></Col>
+    桃から生まれた桃太郎(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)いう男の子は、村の人たち(<span onClick={this.showAnswerHandler} className="hiddenword">を</span>)助けるため(<span onClick={this.showAnswerHandler} className="hiddenword">に</span>)鬼退治に向かいます。道中で動物たち(<span onClick={this.showAnswerHandler} className="hiddenword">と</span>)出会い、仲間となり、共に鬼退治に挑むお話です。<br /><br /></Col>
 <Col><Image className='momotaro-pic' src={momotato} alt='momotaro' /></Col></Row>
 
 
