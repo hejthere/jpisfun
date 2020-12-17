@@ -52,8 +52,7 @@
 
 /* banner  */
 
-.bannertext { 
-    font-size: 3rem; 
+.bannertext {
     position: absolute; 
             top: 50%;
             left: 50%;

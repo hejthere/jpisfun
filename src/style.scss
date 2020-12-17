@@ -87,10 +87,18 @@ $theme-colors: map-merge(
   ),
   $theme-colors
 );
+
 $enable-responsive-font-sizes:                true;
 html {
     font-size: 1rem;
   }
+
+  @include media-breakpoint-up(xs) {
+    html {
+      font-size: 0.9rem;
+    }
+  }
+  
   
   @include media-breakpoint-up(sm) {
     html {
@@ -107,6 +115,12 @@ html {
   @include media-breakpoint-up(lg) {
     html {
       font-size: 1.3rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    html {
+      font-size: 1.4rem;
     }
   }
 

@@ -9,7 +9,7 @@ return (
 
 <Container className='bannerContainer'fluid="true"> 
 <Image src={props.backgrounds} alt='background' fluid='true' style={{'opacity':'0.5'}}/>
-<p className="bannertext"> ようこそ</p>
+<h3 className="bannertext"> ようこそ</h3>
 </Container>
 
 )
