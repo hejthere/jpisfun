@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'react-bootstrap/Button';
 import './randomQuote.css';
 
 class RandomQuote extends Component { 
@@ -43,8 +44,8 @@ return(
 <p class='authorquote'>{this.state.generatedQuote.author}</p>
 </div>
 <br /> 
-<button onClick={this.generateQuoteHandler}>Start</button> 
-<button>Save Quote</button>
+<Button onClick={this.generateQuoteHandler}>Start</Button> 
+<Button>Save Quote</Button>
 <br/> 
 <br/>
 </div>

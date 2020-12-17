@@ -1,14 +1,12 @@
 .menu {
 	border:0px; 
 	font-size: 200%;
-	max-width: 1280px;
   	overflow: hidden;
 }
 
 .subpagelink {
-	height: 8rem; 
-	float: left;
-	padding: 0.5rem 1.5rem;} 
+	height: 6rem; 
+	float: left;} 
 
 .subpagelinkword {
 	position: absolute;
@@ -19,16 +17,8 @@
 	transform: translate(-50%,-50%);	
 }
 
-.menu .col-4 { 
-  float: left;
-  color: white;
-}
 
-div.col-4.greetings, div.col-4.diseases, div.col-4.food {
-position: relative;
-}
-
-.menu .col-4:hover { 
+.menu .menu-col:hover { 
 		-webkit-filter: brightness(0.95); 
 		filter: brightness(0.95);
 		transform: scale(1.03); 
@@ -36,24 +26,22 @@ position: relative;
 }
 	  
 .simple-introduction{
-	max-width: 1280px;
 	height: 60vh;
 	overflow:hidden;
 	background-color: #f7f6e4;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .simple-introduction img { 
 	max-height: 30rem; 
 	width: auto;
-	padding: 0.5rem 10rem;
 	height: 100%;
 
 }
 
 .homepage-japan-vocab {
-	max-width: 1280px;
 	height: 60vh;
 	overflow:hidden;
 	background-color: #92aec4;
@@ -66,7 +54,6 @@ position: relative;
 .homepage-japan-vocab img { 
 	max-height: 30rem; 
 	width: auto;
-	padding: 0.5rem 10rem;
 	height: 100%;
 
 }
@@ -86,7 +73,4 @@ position: relative;
     position: relative; 
     height: auto;
   }
-  
-  .banner { 
-  opacity: 0.5;
-  }
+ 

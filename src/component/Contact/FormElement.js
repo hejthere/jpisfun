@@ -1,5 +1,6 @@
 import React from 'react';
-import './FormElement.css'
+import './FormElement.css';
+import {Form , Container, Row, Col} from 'react-bootstrap';
 
 const FormElement = props => {
 
@@ -12,27 +13,38 @@ const FormElement = props => {
 
     switch (props.elementType) {
         case 'input' :
-        formElement = <input 
+        formElement = 
+        <Form.Group>
+        <Form.Label>{props.label}</Form.Label>
+        <Form.Control 
         className={elementClass.join(' ')}
         value={props.value}
-        {...props.elementConfig}   //to be set in form element obj later//spread original attribute <input> has 
+        {...props.elementConfig}   //to be set in form element obj later//spread original attribute <Form.Control> has 
         onChange={props.change}
          /> 
+         </Form.Group>
         break; 
 
-        case 'email' : 
-        formElement = <input 
+        case 'email': 
+        formElement =
+       <Form.Group>
+        <Form.Label>{props.label}</Form.Label>
+        <Form.Control 
         className={elementClass.join(' ')}
         value={props.value}
         {...props.elementConfig} 
         onChange={props.change}
         > 
-        </input>; 
+        </Form.Control>
+        </Form.Group>
         break;
 
         case 'select' : 
         formElement = (
-        <select 
+        <Form.Group>
+        <Form.Label>{props.label}</Form.Label>
+        <Form.Control 
+        as="select"
         className = {elementClass.join('')}
         value = {props.value}
         onChange={props.change}>
@@ -41,32 +53,29 @@ const FormElement = props => {
         {option.displayValue}
         </option>
         ))} 
-        </select>);
+        </Form.Control>
+        </Form.Group>
+        );
         break; 
 
-        case 'textarea' : 
-        formElement = <textarea 
-        className={elementClass.join(' ')}
-        value={props.value}
-        {...props.elementConfig}   //to be set in form element obj later 
-        onChange={props.change}
-        > 
-        </textarea>; 
-        break; 
         
         default: 
-        formElement = <input 
+        formElement = 
+        <Form.Control 
         value={props.value}
         {...props.elementConfig}   //to be set in form element obj later 
         > 
-        </input>;   
+        </Form.Control>;   
     }
 
     return (
-        <div>
-        <label>{props.label}</label>
+        <Container>
+        <Row>
+        <Col lg={{ span:4, offset: 4 }}>
         {formElement}
-        </div>
+        </Col>
+        </Row>
+        </Container>
     )
 
 }

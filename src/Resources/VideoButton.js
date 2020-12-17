@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import './OtherResources.css'
 
 const VideoButton =props =>  {
@@ -6,8 +7,8 @@ const VideoButton =props =>  {
 
 return (
 
-<button className="video-button" onClick={props.changeUrl} id={props.videoUrl}>{props.children} 
-</button>
+<Button className="video-button" onClick={props.changeUrl} id={props.videoUrl}>{props.children} 
+</Button>
 ) 
     }
 

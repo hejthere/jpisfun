@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './katakana.css';
+import Button from 'react-bootstrap/Button';
+import { ButtonToolbar } from 'react-bootstrap';
 
 class Katakana extends Component { 
 
@@ -40,11 +42,11 @@ render() {
    let options =''; 
    options=  this.state.displayOption.map( option => {
     return ( 
-        <button 
+        <Button
         className='katakana-button'
         onClick={this.answerHandler}
         key={option.id}>
-        {option}</button>
+        {option}</Button>
     )}
     )
 
@@ -54,8 +56,6 @@ return (
 <div className='katakana-container'> 
 <p className='katakana-question'> {this.state.displayQuestion}</p>
 </div>
-<br />
-<br />
 {options}
 </div>
 )}}

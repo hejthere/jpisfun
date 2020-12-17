@@ -1,14 +1,16 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
+import Container from 'react-bootstrap/Container';
 import './home.css'
 
 const Banner = props => {
 
 return ( 
 
-<div className="bannerContainer"> 
-<img className="banner" src={props.backgrounds} alt='background' />
+<Container className='bannerContainer'fluid="true"> 
+<Image src={props.backgrounds} alt='background' fluid='true' style={{'opacity':'0.5'}}/>
 <p className="bannertext"> ようこそ</p>
-</div>
+</Container>
 
 )
 }

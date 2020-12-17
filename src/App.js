@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 import Home from './component/Home/Home' 
 import Test from './component/Test/Test'
 import './index.css'; 
@@ -14,7 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons'; 
 import towerimgage from '../src/Picture/Background.jpg'; 
 import miseimage from '../src/Picture/mise.jpg'; 
-import Katakana from './component/Home/Katakana'
+import Katakana from './component/Home/Katakana';
 
 class App extends Component {
   state= {
@@ -26,17 +29,23 @@ class App extends Component {
 
     return (
    <div>
-   <header> 
-     <nav className="navbar">
-		<ul> 
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'var(--yellow)'}}to='/' exact ><FontAwesomeIcon icon={faIgloo} /> Home</NavLink> </li>
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'var(--yellow)'}}to='/test' ><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</NavLink></li>  
-    <li> <NavLink activeClassName='is-active' activeStyle={{color:'var(--yellow)'}}to='/grammar' ><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</NavLink> </li>
-		<li> <NavLink activeClassName='is-active' activeStyle={{color:'var(--yellow)'}}to='/resources' ><FontAwesomeIcon icon={faGlasses} /> Resources</NavLink>  </li>
-    <li> <NavLink activeClassName='is-active' activeStyle={{color:'var(--yellow)'}}to='/contactus' ><FontAwesomeIcon icon={faAddressBook} /> Contact Us</NavLink> </li>
-		</ul>
-     </nav>
-   </header>
+
+   <Container fluid>
+   <Navbar sticky expand='md' bg="dark" variant="dark">
+   <Navbar.Toggle/>
+   <Navbar.Collapse> 
+     <Nav className='navBar' fill fluid>
+		 <Nav.Item><Nav.Link href="/" ><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link> </Nav.Item>
+		 <Nav.Item><Nav.Link href="/test"><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link></Nav.Item>
+     <Nav.Item><Nav.Link href="/grammar"><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link></Nav.Item>
+		 <Nav.Item><Nav.Link href="/resources"><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> </Nav.Item>
+     <Nav.Item><Nav.Link href="/contactus"><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link></Nav.Item>
+     </Nav>
+     </Navbar.Collapse>
+    </Navbar>
+    </Container>
+
+
 
   <Switch>
   <Route path="/" exact render={(props) => (

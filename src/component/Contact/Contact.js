@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'react-bootstrap/Button';
 import FormElement from './FormElement'; 
 
 class Contact extends Component { 
@@ -36,7 +37,7 @@ state={
 
         },
         Email:{ 
-            elementType: 'input',
+            elementType: 'email',
             elementConfig: { 
                 type:'email',
                 placeholder:'Your email'
@@ -119,15 +120,13 @@ let contactform = (
     touched={formelement.value.touched}
     />))}
     <br/>
-    <button onClick={this.submitHandler} className="submitButton">Submit</button>
+    <Button onClick={this.submitHandler} className="submitButton">Submit</Button>
     <br/>
     </form>
      )
 
 return ( 
     <div> 
-    <p id='message'>Contact us through this message form.
-    </p>
     {contactform}
     </div>
  ) 
