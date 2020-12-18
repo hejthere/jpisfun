@@ -31,17 +31,17 @@ class Test extends React.Component
 	<Button onClick={this.shownAnswerHandler.bind(this,1)} > ANSWER </Button>
 	<div id= "Answer1" className ="Answer" >お元気ですか </div> </Col> 
 	<Col>
-	<div id= "Question"> How are you </div>
+	<div id= "Question"> Thank You </div>
 	<Button onClick={this.shownAnswerHandler.bind(this,2)} > ANSWER </Button>
-	<div id= "Answer2" className ="Answer"  >お元気ですか </div> </Col> 
+	<div id= "Answer2" className ="Answer">ありがとう </div> </Col> 
 	<Col>
-	<div id= "Question"> How are you </div>
+	<div id= "Question"> Sorry </div>
 	<Button onClick={this.shownAnswerHandler.bind(this,3)} > ANSWER </Button>
-	<div id= "Answer3" className ="Answer"  >お元気ですか </div> </Col> 
+	<div id= "Answer3" className ="Answer"  >すみません </div> </Col> 
 	<Col>
-	<div id= "Question"> How are you </div>
+	<div id= "Question"> Goodbye </div>
 	<Button onClick={this.shownAnswerHandler.bind(this,4)} > ANSWER </Button>
-	<div id= "Answer4" className ="Answer"  >お元気ですか </div> </Col> 
+	<div id= "Answer4" className ="Answer"  >じゃね </div> </Col> 
 
 	</Row>
 	</Container>

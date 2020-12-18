@@ -29,7 +29,7 @@ let button = document.getElementsByClassName('katakana-button');
 var i;
 for (i = 0; i < button.length; i++) {
     button[i].style.border='2px solid var(--blue)';
-    button[i].style.color='var(--blue)';
+    button[i].style.color='white';
 
 }
 }else{ 
@@ -54,6 +54,7 @@ render() {
 return ( 
 <div>
 <div className='katakana-container'> 
+<br />
 <p className='katakana-question'> {this.state.displayQuestion}</p>
 </div>
 {options}

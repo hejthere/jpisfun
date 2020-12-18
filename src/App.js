@@ -36,10 +36,10 @@ class App extends Component {
    <Navbar.Collapse> 
      <Nav className='navBar' fill fluid>
 		 <Nav.Item><Nav.Link href="/" ><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link> </Nav.Item>
-		 <Nav.Item><Nav.Link href="/#/test"><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link></Nav.Item>
-     <Nav.Item><Nav.Link href="/#/grammar"><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link></Nav.Item>
-		 <Nav.Item><Nav.Link href="/#/resources"><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> </Nav.Item>
-     <Nav.Item><Nav.Link href="/#/contactus"><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link></Nav.Item>
+		 <Nav.Item><Nav.Link href="/test"><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link></Nav.Item>
+     <Nav.Item><Nav.Link href="/grammar"><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link></Nav.Item>
+		 <Nav.Item><Nav.Link href="/resources"><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> </Nav.Item>
+     <Nav.Item><Nav.Link href="/contactus"><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link></Nav.Item>
      </Nav>
      </Navbar.Collapse>
     </Navbar>
