@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -28,6 +28,7 @@ class App extends Component {
   render () {
 
     return (
+   <HashRouter basename='/'>
    <div>
 
    <Container fluid>
@@ -78,6 +79,7 @@ class App extends Component {
   </Switch> 
 
    </div>
+   </HashRouter>
     )}}
     
 export default App;
