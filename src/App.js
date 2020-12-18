@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import { Switch, Route,Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -28,7 +28,7 @@ class App extends Component {
   render () {
 
     return (
-   <HashRouter basename='/'>
+
    <div>
 
    <Container fluid>
@@ -36,11 +36,11 @@ class App extends Component {
    <Navbar.Toggle/>
    <Navbar.Collapse> 
      <Nav className='navBar' fill fluid>
-		 <Nav.Item><Nav.Link href="/jpisfun/" ><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link> </Nav.Item>
-		 <Nav.Item><Nav.Link href="/jpisfun/test"><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link></Nav.Item>
-     <Nav.Item><Nav.Link href="/jpisfun/grammar"><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link></Nav.Item>
-		 <Nav.Item><Nav.Link href="/jpisfun/resources"><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> </Nav.Item>
-     <Nav.Item><Nav.Link href="/jpisfun/contactus"><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link></Nav.Item>
+		 <Nav.Item><Link to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link> </Nav.Item>
+		 <Nav.Item><Link to='/test'><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Link></Nav.Item>
+     <Nav.Item><Link to='/grammar'><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Link></Nav.Item>
+		 <Nav.Item><Link to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> </Nav.Item>
+     <Nav.Item><Link to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link></Nav.Item>
      </Nav>
      </Navbar.Collapse>
     </Navbar>
@@ -79,7 +79,6 @@ class App extends Component {
   </Switch> 
 
    </div>
-   </HashRouter>
     )}}
     
 export default App;

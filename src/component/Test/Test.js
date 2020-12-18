@@ -20,7 +20,7 @@ class Test extends React.Component
     <Col xs={9}><h5 className='introduction'>
     Do you know how to say the following greetings in Japanese? <br />
     Press the button to check the answer ! </h5></Col>
-    <Col xs={3}><Image src={teacher} className='introduction' alt='uketsuke'/></Col>
+    <Col xs={3}><Image fluid src={teacher} className='introduction' alt='uketsuke'/></Col>
     </Row>
 
 
