@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Switch, Route,Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import Home from './component/Home/Home' 
 import Test from './component/Test/Test'
@@ -35,13 +34,13 @@ class App extends Component {
    <Container fluid>
    <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
    <Navbar.Toggle  />
-   <Navbar.Collapse>
+   <Navbar.Collapse id="responsive-navbar-nav">
      <Nav className='navBar' fill fluid>
-		<Nav.Link href='/'><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link> 
-		<Nav.Link href='/test'><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link>
-    <Nav.Link href='/grammar'><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link>
-		<Nav.Link href='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> 
-    <Nav.Link href='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link>
+		<Nav.Link as="a" href='/'><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link> 
+		<Nav.Link as="a" href='/test'><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Nav.Link>
+    <Nav.Link as="a" href='/grammar'><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Nav.Link>
+		<Nav.Link as="a" href='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Nav.Link> 
+    <Nav.Link as="a" href='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Nav.Link>
      </Nav>
      </Navbar.Collapse>
     </Navbar>
