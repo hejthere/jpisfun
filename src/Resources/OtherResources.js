@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import VideoButton from './VideoButton';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import './OtherResources.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointDown } from '@fortawesome/free-solid-svg-icons'; 
@@ -42,20 +46,27 @@ return ( <VideoButton
 
 let videoFrame=[];
 if(this.state.showVideo){
-videoFrame = <iframe width="560" height="315" src={this.state.selectedVideo} title='jpvideo'></iframe> 
+videoFrame =<iframe className='resources-video' src={this.state.selectedVideo} title='jpvideo'></iframe>
 }
 
 return ( 
     
-<div> 
+<Container fluid> 
+<Row fluid sm={1} md={2}>
+<Col> 
 <p className='introductionResource'> <FontAwesomeIcon icon={faHandPointDown} /> Select an video to watch <FontAwesomeIcon icon={faHandPointDown} /></p> 
 <div className='video-button-container'>
 {playButton}
 </div>
+</Col>
+<Col> 
+<br />
+<br />
 {videoFrame}
+</Col>
 <br />
-<br />
-</div> 
+</Row>
+</Container> 
 
  
 

@@ -25,7 +25,7 @@ class Test extends React.Component
 
 
     <Container fluid='true'>
-	<Row xs={1} sm={1} md={2} lg={4}>
+	<Row xs={2} sm={2} md={4} lg={4}>
 	<Col>
 	<div id= "Question"> How are you </div>
 	<Button onClick={this.shownAnswerHandler.bind(this,1)} > ANSWER </Button>
