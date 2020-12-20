@@ -52,7 +52,7 @@ videoFrame =<iframe className='resources-video' src={this.state.selectedVideo} t
 return ( 
     
 <Container fluid> 
-<Row fluid sm={1} md={2}>
+<Row fluid xs={1} sm={1} md={2}>
 <Col> 
 <p className='introductionResource'> <FontAwesomeIcon icon={faHandPointDown} /> Select an video to watch <FontAwesomeIcon icon={faHandPointDown} /></p> 
 <div className='video-button-container'>

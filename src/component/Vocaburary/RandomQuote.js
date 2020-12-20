@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Quotes from './Quotes'
 import './randomQuote.css';
+
 
 class RandomQuote extends Component { 
 
@@ -18,7 +20,8 @@ quotes: [
 { id:'9', japanese:'僕はもう十分逃げた。ようやく守らなければならないものが分かったんだんだ。君だ。　' , english: 'I’m through running away. I’ve finally found someone I want to protect…YOU.' , author:'ハウル-ハウルの動く城'},
 { id:'10', japanese:'生きてりゃ何とかなる' , english: 'As long as we’re alive, we’ll manage.' , author:'トキ-もののけ姫'}]
 ,
-generatedQuote: {id:'', japanese:'Get Your Quotes of Today' , english: '' , author:''}
+generatedQuote: {id:'', japanese:'Get Your Quotes of Today' , english: '' , author:''},
+savedQuotes:[]
 }
 
 generateQuoteHandler =()=> {
@@ -30,32 +33,40 @@ generateQuoteHandler =()=> {
     updatedQuote = selectedquote;
     this.setState( 
     { generatedQuote: updatedQuote }); 
-    console.log(this.state.generatedQuote)
     }
+
+saveQuoteHandler =()=> {
+let quoteArray = [...this.state.savedQuotes]; 
+quoteArray.push(this.state.generatedQuote);
+this.setState({savedQuotes: quoteArray });
+localStorage.setItem('savedQuotes', JSON.stringify(this.state.savedQuotes)); 
+}
+
+
+
+
 
 render() {
 
 
 return( 
 <Container>
+<Quotes 
+japaneseQuote = {this.state.generatedQuote.japanese} 
+englishQuote = {this.state.generatedQuote.english}
+authorQuote = {this.state.generatedQuote.author}
+/> 
 
-<div class='quotebox'> 
-<p class='japanesequote'>{this.state.generatedQuote.japanese}</p>
-<p class='englishquote'>{this.state.generatedQuote.english}</p>
-<br/>
-<p class='authorquote'>{this.state.generatedQuote.author}</p>
-</div>
 <br /> 
-<Button onClick={this.generateQuoteHandler}>Start</Button> 
-<Button>Save Quote</Button>
+<Button onClick={this.generateQuoteHandler}>Start</Button> &nbsp;
+<Button onClick={this.saveQuoteHandler}>Save Quote</Button>
+<br />
+<br />
+<Button href="/jpisfun/savedquotes"> View Saved Quotes</Button>
 <br/> 
 <br/>
 </Container>
 
-)
-
-}
-
-}
+)}}
 
 export default RandomQuote; 

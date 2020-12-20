@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { LinkContainer } from 'react-router-bootstrap';
 import Home from './component/Home/Home' 
 import Test from './component/Test/Test'
 import './index.css'; 
@@ -18,23 +19,27 @@ import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawe
 import towerimgage from '../src/Picture/Background.jpg'; 
 import miseimage from '../src/Picture/mise.jpg'; 
 import Katakana from './component/Home/Katakana';
+import SavedQuotes from './component/Vocaburary/SavedQuotes';
 
 class App extends Component {
 
-  NavButtonHandler =()=> { 
-      var navBar =  document.getElementById('navBar');
-      if (navBar.style.display === "block"){ 
-        navBar.style.display = "none";
-      };
-      if (navBar.style.display === "none"){ 
-        navBar.style.display = "block";
-      };
-    }
-  
-    CollapseHandler =()=> { 
-      var navBar =  document.getElementById('navBar'); 
+NavButtonHandler =()=> { 
+  var navBar =  document.getElementById('navBar1');
+  if(window.innerWidth < 768) {
+    if (navBar.style.display === "block"){ 
       navBar.style.display = "none";
-      }
+    };
+  
+    if (navBar.style.display === "none"){ 
+      navBar.style.display = "block";
+    };
+  }}
+  
+  CollapseHandler =()=> { 
+    var navBar =  document.getElementById('navBar1'); 
+    if(window.innerWidth < 768){
+    navBar.style.display = "none";
+    }}
   
 
 
@@ -47,9 +52,9 @@ class App extends Component {
    <Container fluid>
    <Navbar expand='md' bg="dark" variant="dark">
    <Navbar.Toggle onClick={this.NavButtonHandler} />
-   <Navbar.Collapse >
-    <Nav  id='navBar' className='navBar' fill fluid>
-    <Link onClick={this.CollapseHandler} className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link> 
+   <Navbar.Collapse>
+    <Nav id='navBar1' className='navBar' fill fluid>
+    <Link onClick={this.CollapseHandler} className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link>
 		<Link onClick={this.CollapseHandler} className='nav-link' to='/test'><FontAwesomeIcon icon={faVial} /> Test Your Knowledge</Link>
     <Link onClick={this.CollapseHandler} className='nav-link' to='/grammar'><FontAwesomeIcon icon={faPencilAlt} /> Grammar Practice</Link>
 		<Link onClick={this.CollapseHandler} className='nav-link' to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> 
@@ -88,6 +93,7 @@ class App extends Component {
   <Route path="/contactus" exact component={Contact} /> 
   <Route path="/quotes" exact component={RandomQuote} />
   <Route path="/katakana" exact component={Katakana} />
+  <Route path="/savedquotes" exact component={SavedQuotes} />
   </Switch> 
 
    </div>
