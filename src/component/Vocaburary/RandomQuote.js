@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import {Link} from 'react-router-dom';
 import Quotes from './Quotes'
 import './randomQuote.css';
 
@@ -22,6 +23,10 @@ quotes: [
 ,
 generatedQuote: {id:'', japanese:'Get Your Quotes of Today' , english: '' , author:''},
 savedQuotes:[]
+};
+
+componentDidUpdate(){
+    localStorage.setItem('savedQuotes', JSON.stringify(this.state.savedQuotes)); 
 }
 
 generateQuoteHandler =()=> {
@@ -35,19 +40,15 @@ generateQuoteHandler =()=> {
     { generatedQuote: updatedQuote }); 
     }
 
+
 saveQuoteHandler =()=> {
-let quoteArray = [...this.state.savedQuotes]; 
+const quoteArray = [...this.state.savedQuotes];
 quoteArray.push(this.state.generatedQuote);
 this.setState({savedQuotes: quoteArray });
-localStorage.setItem('savedQuotes', JSON.stringify(this.state.savedQuotes)); 
 }
 
 
-
-
-
 render() {
-
 
 return( 
 <Container>
@@ -62,7 +63,7 @@ authorQuote = {this.state.generatedQuote.author}
 <Button onClick={this.saveQuoteHandler}>Save Quote</Button>
 <br />
 <br />
-<Button href="/jpisfun/savedquotes"> View Saved Quotes</Button>
+<Button><Link to ="/savedquotes"> View Saved Quotes</Link></Button>
 <br/> 
 <br/>
 </Container>
