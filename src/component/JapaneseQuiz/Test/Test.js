@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import './Test.css';
-import teacher from '../../Picture/teacher.png';
+import teacher from '../../../Picture/teacher.png';
 import { Container, Col } from 'react-bootstrap';
 
 class Test extends React.Component
@@ -18,7 +18,7 @@ class Test extends React.Component
     <div>
     <Row fluid className='introduction'> 
     <Col xs={9}><h5 className='introduction'>
-    Do you know how to say the following greetings in Japanese? <br />
+    Level 2 : Do you know how to say the following greetings in Japanese?
     Press the button to check the answer ! </h5></Col>
     <Col xs={3}><Image fluid src={teacher} className='introduction' alt='uketsuke'/></Col>
     </Row>

@@ -19,16 +19,16 @@ return (
 <div>
 <Row xs={1} sm={1} md={3} lg={3} fluid='true' className="menu"> 
 <Col className="menu-col"style={{ backgroundColor:'#496D89'}} >
-	<Link className="picturelink" to='/test'>
-		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Greetings </h5> </Link>
+	<Link className="picturelink" to='/quiz'>
+		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Quiz </h5> </Link>
  </Col>
  <Col className="menu-col" style={{ backgroundColor:'#ffcc00'}}>
-	<Link className="picturelink" to='/VocabDiseases'>
-		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Diseases </h5></Link>
+	<Link className="picturelink" to='/vocaburary'>
+		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Vocaburary </h5></Link>
  </Col>
 <Col className="menu-col" style={{ backgroundColor:'#aa5939'}}> 
-	<Link  className="picturelink" to='/quotes'>
-		<Image src ={food} className="subpagelink" alt='food' /> <h5 className="subpagelinkword"> &nbsp; Quotes </h5></Link>
+	<Link  className="picturelink" to='/resources'>
+		<Image src ={food} className="subpagelink" alt='food' /> <h5 className="subpagelinkword"> &nbsp; Resources </h5></Link>
 </Col> 
 </Row>
 

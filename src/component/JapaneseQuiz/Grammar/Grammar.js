@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './Grammar.css'
-import momotato from '../../Picture/momotaro.png';
+import momotato from '../../../Picture/momotaro.png';
 
 
 
@@ -50,7 +50,7 @@ render () {
 return (
 <Container fluid>
     <h5 className='description'>
-    Do you know which particle should be used in the following article ?
+    Level 3 : Do you know which particle should be used in the following article ?
     Click the space to view the answer. </h5><br />
 
 <Row sm={1} xs={1} md={2} lg={2} id='momotaro-container'>
@@ -62,7 +62,7 @@ return (
 <Button onClick={this.readOutLoudHandler}>Listen</Button>
 {/* <audio hidden controls></audio> */}
 {/* <script src="External_file/voiceRSS.js"></script>  */}
-<br />
+
 <Button onClick={this.showTranslationHandler}>See Translation</Button> 
 <div id='translation'></div>
 <br/> 

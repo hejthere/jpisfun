@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './katakana.css';
 import Button from 'react-bootstrap/Button';
-import { ButtonToolbar } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Katakana extends Component { 
 
@@ -52,13 +54,16 @@ render() {
 
 
 return ( 
-<div>
+<Container fluid>
+<h5 className='katakana-introduction'>
+   Level 1: Do you know the romaji of the following katakana ? </h5>
+
 <div className='katakana-container'> 
 <br />
 <p className='katakana-question'> {this.state.displayQuestion}</p>
 </div>
 {options}
-</div>
+</Container>
 )}}
 
 export default Katakana;
