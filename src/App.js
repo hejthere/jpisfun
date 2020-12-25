@@ -36,15 +36,15 @@ class App extends Component {
    <Navbar.Toggle />
    <Navbar.Collapse>
     <Nav id='navBar1' className='navBar' fill fluid>
-    <Nav.Link href='/'><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link>
-    <NavDropdown href='/quiz' title={<span><FontAwesomeIcon icon={faVial} /> Quiz</span>} id="nav-dropdown">
-        <NavDropdown.Item href ="/quiz/#katakana" eventKey="1.1">(Level 1) Katakana Test</NavDropdown.Item>
-        <NavDropdown.Item href ="/quiz/#test" eventKey="1.2">(Level 2) Greetings</NavDropdown.Item>
-        <NavDropdown.Item href ="/quiz/#grammar" eventKey="1.3">(Level 3) Grammar Practice</NavDropdown.Item>
+    <Link className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link>
+    <NavDropdown title={<span><FontAwesomeIcon icon={faVial} /> Quiz</span>} id="nav-dropdown">
+        <NavDropdown.Item eventKey="1.1"><Link to="/quiz/katakana">(Level 1) Katakana Test</Link></NavDropdown.Item>
+        <NavDropdown.Item eventKey="1.2"><Link to="/quiz/test">(Level 2) Greetings</Link></NavDropdown.Item>
+        <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 3) Grammar Practice</Link></NavDropdown.Item>
       </NavDropdown>
-      <NavDropdown href='/vocaburary' title={<span><FontAwesomeIcon icon={faPencilAlt} /> Vocaburary</span>} id="nav-dropdown">
-        <NavDropdown.Item href ="/vocaburary/#quotes" eventKey="2.1">Quotes of Today</NavDropdown.Item>
-        <NavDropdown.Item href ="/vocaburary/#diseases" eventKey="2.2">Diseases</NavDropdown.Item>
+      <NavDropdown title={<span><FontAwesomeIcon icon={faPencilAlt} /> Vocaburary</span>} id="nav-dropdown">
+        <NavDropdown.Item  eventKey="2.1"><Link to='/vocaburary/quotes'>Quotes of Today</Link></NavDropdown.Item>
+        <NavDropdown.Item  eventKey="2.2"><Link to="/vocaburary/vocabdiseases">Diseases</Link></NavDropdown.Item>
       </NavDropdown>
 		<Link className='nav-link' to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> 
     <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
@@ -79,13 +79,13 @@ class App extends Component {
   
   <Switch>
   <Route path="/" exact component={Home} />
-  <Route path="/test" exact component={Test} /> 
-  <Route path="/grammar" exact component={Grammar} /> 
-  <Route path="/vocabdiseases" exact component={VocabDiseases} />
+  <Route path="/quiz/test" exact component={Test} /> 
+  <Route path="/quiz/grammar" exact component={Grammar} /> 
+  <Route path="/vocaburary/vocabdiseases" exact component={VocabDiseases} />
   <Route path="/resources" exact component={OtherResources} />  
   <Route path="/contactus" exact component={Contact} /> 
-  <Route path="/quotes" exact component={RandomQuote} />
-  <Route path="/katakana" exact component={Katakana} />
+  <Route path="/vocaburary/quotes" exact component={RandomQuote} />
+  <Route path="/quiz/katakana" exact component={Katakana} />
   <Route path="/savedquotes" exact component={SavedQuotes} />
   <Route path="/quiz" exact component={JapaneseQuiz} />
   <Route path="/vocaburary" exact component={Vocaburary} />
