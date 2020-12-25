@@ -43,7 +43,26 @@ class Test extends React.Component
 	<Button onClick={this.shownAnswerHandler.bind(this,4)} > ANSWER </Button>
 	<div id= "Answer4" className ="Answer"  >じゃね </div> </Col> 
 
+	<Col>
+	<div id= "Question"> Good Night </div>
+	<Button onClick={this.shownAnswerHandler.bind(this,5)} > ANSWER </Button>
+	<div id= "Answer5" className ="Answer"  > おやすみ</div> </Col> 
+	
+	<Col>
+	<div id= "Question">  Add Oil </div>
+	<Button onClick={this.shownAnswerHandler.bind(this,6)} > ANSWER </Button>
+	<div id= "Answer6" className ="Answer"  >頑張って！ </div> </Col> 
+	
+	<Col>
+	<div id= "Question"> See you tomorrow </div>
+	<Button onClick={this.shownAnswerHandler.bind(this,7)} > ANSWER </Button>
+	<div id= "Answer7" className ="Answer"  >またあした </div> </Col> 
 	</Row>
+
+	<Col>
+	<div id= "Question8"> Good Afternoon </div>
+	<Button onClick={this.shownAnswerHandler.bind(this,8)} > ANSWER </Button>
+	<div id= "Answer4" className ="Answer"  >こんにちは</div> </Col> 
 	</Container>
 	
     <Button onClick={window.print}> Print </Button>
