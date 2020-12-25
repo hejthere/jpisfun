@@ -57,12 +57,14 @@ class Test extends React.Component
 	<div id= "Question"> See you tomorrow </div>
 	<Button onClick={this.shownAnswerHandler.bind(this,7)} > ANSWER </Button>
 	<div id= "Answer7" className ="Answer"  >またあした </div> </Col> 
+	
+	<Col>
+	<div id= "Question"> Good Afternoon </div>
+	<Button onClick={this.shownAnswerHandler.bind(this,8)} > ANSWER </Button>
+	<div id= "Answer8" className ="Answer"  >こんにちは</div> </Col> 
+
 	</Row>
 
-	<Col>
-	<div id= "Question8"> Good Afternoon </div>
-	<Button onClick={this.shownAnswerHandler.bind(this,8)} > ANSWER </Button>
-	<div id= "Answer4" className ="Answer"  >こんにちは</div> </Col> 
 	</Container>
 	
     <Button onClick={window.print}> Print </Button>
