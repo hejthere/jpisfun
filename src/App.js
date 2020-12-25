@@ -36,7 +36,7 @@ class App extends Component {
    <Navbar.Toggle />
    <Navbar.Collapse>
     <Nav id='navBar1' className='navBar' fill fluid>
-    <Link className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link>
+    <Nav.Link href='/'><FontAwesomeIcon icon={faIgloo} /> Home</Nav.Link>
     <NavDropdown href='/quiz' title={<span><FontAwesomeIcon icon={faVial} /> Quiz</span>} id="nav-dropdown">
         <NavDropdown.Item href ="/quiz/#katakana" eventKey="1.1">(Level 1) Katakana Test</NavDropdown.Item>
         <NavDropdown.Item href ="/quiz/#test" eventKey="1.2">(Level 2) Greetings</NavDropdown.Item>
