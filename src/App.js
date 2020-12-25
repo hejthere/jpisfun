@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link} from 'react-router-dom';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import Home from './component/Home/Home' 
 import Test from './component/JapaneseQuiz/Test/Test'
@@ -22,7 +22,6 @@ import Katakana from './component/JapaneseQuiz/katakana/Katakana';
 import SavedQuotes from './component/Vocaburary/SavedQuotes';
 import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
 import Vocaburary from './component/Vocaburary/Vocaburary';
-import { Nav, NavItem, NavLink } from 'reactstrap';
 
 class App extends Component {  
 
@@ -33,26 +32,7 @@ class App extends Component {
    <div>
 
    <Container fluid>
-
-   <div>
-      <p>List Based</p>
-      <Nav>
-        <NavItem>
-          <NavLink href="/">Link</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="/test">Link</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="/jpisfun/test">Another Link</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink disabled href="#">Disabled Link</NavLink>
-        </NavItem>
-      </Nav>
-      <hr />
-    </div>
-   {/* <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
+   <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
    <Navbar.Toggle />
    <Navbar.Collapse>
     <Nav id='navBar1' className='navBar' fill fluid>
@@ -70,7 +50,7 @@ class App extends Component {
     <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
     </Nav>
     </Navbar.Collapse>
-    </Navbar> */}
+    </Navbar>
     </Container>
 
 
