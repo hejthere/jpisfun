@@ -5,14 +5,36 @@ import Button from 'react-bootstrap/Button';
 import './Test.css';
 import teacher from '../../../Picture/teacher.png';
 import { Container, Col } from 'react-bootstrap';
+import Card from './Card'; 
 
-class Test extends React.Component
-{ 
-    shownAnswerHandler =(number) => {
-        var result= document.getElementById('Answer'+number);
-        result.style.visibility='visible';}
-
+class Test extends React.Component{
+	state = {
+	flipCards: [ 
+	{question:'How are you', answer:'お元気ですか' },
+	{question:'Thank You', answer:'ありがとう' },
+	{question:'Sorry', answer:'すみません'},
+	{question:'Goodbye', answer:'じゃね'},
+	{question:'Good Night', answer:'おやすみ' },
+	{question:'Add Oil', answer:'頑張って！' },
+	{question:'See you tmr', answer:'またあした'},
+	{question:'Take care', answer:'お大事に'},
+	]}
+	
+    // shownAnswerHandler =(number) => {
+    //     var result= document.getElementById('Answer'+number);
+    //     result.style.visibility='visible';}
+	
     render (){ 
+
+	let cards =	this.state.flipCards.map( card => { 
+	return (
+	
+		<Card 
+		question={card.question}
+		answer={card.answer} /> 
+	)
+	})
+
 
     return (
     <div>
@@ -24,7 +46,15 @@ class Test extends React.Component
     </Row>
 
 
-    <Container fluid='true'>
+	<Container fluid>
+		<Row sm={2} xs={2} md={4} xl={4}>  
+		{cards}
+		</Row>
+	</Container>
+	<br /> 
+	
+
+    {/* <Container fluid='true'>
 	<Row xs={2} sm={2} md={4} lg={4}>
 	<Col>
 	<div id= "Question"> How are you </div>
@@ -65,7 +95,7 @@ class Test extends React.Component
 
 	</Row>
 
-	</Container>
+	</Container> */}
 	
     <Button onClick={window.print}> Print </Button>
     <Button onClick={window.history.back}> Back </Button>

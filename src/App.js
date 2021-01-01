@@ -38,7 +38,7 @@ class App extends Component {
     <Nav id='navBar1' className='navBar' fill fluid>
     <Link className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link>
     <NavDropdown title={<span><FontAwesomeIcon icon={faVial} /> Quiz</span>} id="nav-dropdown">
-        <NavDropdown.Item eventKey="1.1"><Link to="/quiz/katakana">(Level 1) Katakana Test</Link></NavDropdown.Item>
+    <Link to="/quiz/katakana"><NavDropdown.Item eventKey="1.1">(Level 1) Katakana Test</NavDropdown.Item></Link>
         <NavDropdown.Item eventKey="1.2"><Link to="/quiz/test">(Level 2) Greetings</Link></NavDropdown.Item>
         <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 3) Grammar Practice</Link></NavDropdown.Item>
       </NavDropdown>

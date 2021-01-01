@@ -11,7 +11,6 @@ let storedQuotes = [];
 let displayQuotes = [];
 storedQuotes = JSON.parse(localStorage.getItem('savedQuotes'));
 
-console.log(storedQuotes);
 
 displayQuotes = storedQuotes.map( quote => {
 return(<Quotes 
