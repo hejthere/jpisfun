@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './katakana.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 class Katakana extends Component { 
 
@@ -63,6 +61,8 @@ return (
 <p className='katakana-question'> {this.state.displayQuestion}</p>
 </div>
 {options}
+<br />
+<br />
 </Container>
 )}}
 

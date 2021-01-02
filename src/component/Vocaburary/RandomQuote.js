@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import {Link} from 'react-router-dom';
 import Quotes from './Quotes'
@@ -22,7 +23,8 @@ quotes: [
 { id:'10', japanese:'生きてりゃ何とかなる' , english: 'As long as we’re alive, we’ll manage.' , author:'トキ-もののけ姫'}]
 ,
 generatedQuote: {id:'', japanese:'Get Your Quotes of Today' , english: '' , author:''},
-savedQuotes:[]
+savedQuotes:[],
+canSaveQuote:false
 };
 
 componentDidUpdate(){
@@ -37,7 +39,9 @@ generateQuoteHandler =()=> {
     }
     updatedQuote = selectedquote;
     this.setState( 
-    { generatedQuote: updatedQuote }); 
+    { generatedQuote: updatedQuote,
+    canSaveQuote: true}
+    ); 
     }
 
 
@@ -51,7 +55,8 @@ this.setState({savedQuotes: quoteArray });
 render() {
 
 return( 
-<Container>
+<Container fluid>
+<Row><h2 className="saved-Quotes-title">Try and Get a random Ghibli Quote!</h2></Row>
 <Quotes 
 japaneseQuote = {this.state.generatedQuote.japanese} 
 englishQuote = {this.state.generatedQuote.english}
@@ -60,7 +65,7 @@ authorQuote = {this.state.generatedQuote.author}
 
 <br /> 
 <Button onClick={this.generateQuoteHandler}>Start</Button> &nbsp;
-<Button onClick={this.saveQuoteHandler}>Save Quote</Button>
+<Button className={this.state.canSaveQuote? "":"disabled"} onClick={this.saveQuoteHandler}>Save Quote</Button>
 <br />
 <br />
 <Button><Link to ="/savedquotes"> View Saved Quotes</Link></Button>
