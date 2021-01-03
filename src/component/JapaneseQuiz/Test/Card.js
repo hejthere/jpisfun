@@ -8,16 +8,15 @@ const Card = ( props )=> {
     const [flip, setFlip] = useState(false); 
     
     return(
-        <Col> 
+        <div> 
         <div
-        onClick={()=> {setFlip(!flip)
-                       console.log(flip) }}
+        onClick={()=> {setFlip(!flip)}}
         className={`normalCard ${flip?'flip':''}`}>
         
 		<div className='frontside'>{props.question}</div>
 		<div className='backside'>{props.answer}</div> 
         </div>
-        </Col>
+        </div>
     )
 }
 
