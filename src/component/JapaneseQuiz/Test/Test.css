@@ -75,7 +75,8 @@
     grid-template-columns: repeat(auto-fill,minmax(300px,auto));
     grid-auto-rows: 100px;
     align-items: center;
-    gap:0.3rem;
+    row-gap:8%;
+    column-gap: 0.3rem;
   }
 
  

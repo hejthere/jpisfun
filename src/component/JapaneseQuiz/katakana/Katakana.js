@@ -7,9 +7,13 @@ class Katakana extends Component {
 
 state = { 
 question: [ 
-{id:1, katakana:'あ', option:['a' ,'i','e','o'], answer:'a'},
-{id:2, katakana:'い', option:['a' ,'i','e','o'], answer:'i'},
-{id:3, katakana:'う', option:['a' ,'i','u','o'], answer:'u'},],
+{id:1, katakana:'あ', option:['a' ,'i','u','e','o'], answer:'a'},
+{id:2, katakana:'い', option:['a' ,'i','u','e','o'], answer:'i'},
+{id:3, katakana:'う', option:['a' ,'i','u','e','o'], answer:'u'},
+{id:4, katakana:'え', option:['a' ,'i','u','e','o'], answer:'u'},
+{id:5, katakana:'お', option:['a' ,'i','u','e','o'], answer:'o'},
+{id:6, katakana:'か', option:['ka','ki','ku','ke','ko'], answer:'ka'},
+{id:7, katakana:'き', option:['ka','ki','ku','ke','ko'], answer:'ki'},],
 displayQuestion: 'あ',
 displayOption: ['a' ,'i','e','o'],
 displayAnswer: 'a',
