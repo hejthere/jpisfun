@@ -47,9 +47,9 @@ class Test extends React.Component{
 
 
 	<Container fluid>
-		<Row sm={2} xs={2} md={3} xl={4}>  
+		<div className="card-container">  
 		{cards}
-		</Row>
+		</div>
 	</Container>
 	<br /> 
 	
