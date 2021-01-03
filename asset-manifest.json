@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jpisfun/static/css/main.208b0ea8.chunk.css",
+    "main.css": "/jpisfun/static/css/main.e741b6ca.chunk.css",
     "main.js": "/jpisfun/static/js/main.efd077d6.chunk.js",
     "main.js.map": "/jpisfun/static/js/main.efd077d6.chunk.js.map",
     "runtime-main.js": "/jpisfun/static/js/runtime-main.44e843be.js",
@@ -10,7 +10,7 @@
     "static/js/2.5941bb7b.chunk.js.map": "/jpisfun/static/js/2.5941bb7b.chunk.js.map",
     "index.html": "/jpisfun/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/jpisfun/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.208b0ea8.chunk.css.map": "/jpisfun/static/css/main.208b0ea8.chunk.css.map",
+    "static/css/main.e741b6ca.chunk.css.map": "/jpisfun/static/css/main.e741b6ca.chunk.css.map",
     "static/js/2.5941bb7b.chunk.js.LICENSE.txt": "/jpisfun/static/js/2.5941bb7b.chunk.js.LICENSE.txt",
     "static/media/Background.bd3d8925.jpg": "/jpisfun/static/media/Background.bd3d8925.jpg",
     "static/media/daruma.bb00d9a4.png": "/jpisfun/static/media/daruma.bb00d9a4.png",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.44e843be.js",
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.5941bb7b.chunk.js",
-    "static/css/main.208b0ea8.chunk.css",
+    "static/css/main.e741b6ca.chunk.css",
     "static/js/main.efd077d6.chunk.js"
   ]
 }
