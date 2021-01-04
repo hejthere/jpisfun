@@ -1,3 +1,11 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
 /* Test your knowledge */
 
 .introduction {
@@ -38,24 +46,37 @@ img.introduction {
 }
 
 .normalCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 7px;
     margin: 5px 7px;
+    -webkit-box-shadow: 5px 5px 2px rgb(105, 110, 116);
     box-shadow: 5px 5px 2px rgb(105, 110, 116);
     position: relative;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transform: perspective(1000px) rotateY(var(--rotateY, 0));
     transform: perspective(1000px) rotateY(var(--rotateY, 0));
+    -o-transition: 300ms;
     transition: 300ms;
     -webkit-transition: 300ms;
     min-height: 100px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background-color: rgb(243, 243, 243);
     cursor: pointer;
 }
 
 .normalCard .backside {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -72,10 +93,15 @@ img.introduction {
 }
 
 .card-container {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     grid-auto-rows: 100px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    row-gap: 8%;
+    row-gap: 2%;
+    -webkit-column-gap: 0.3rem;
+    -moz-column-gap: 0.3rem;
     column-gap: 0.3rem;
 }
