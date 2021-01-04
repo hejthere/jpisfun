@@ -33,6 +33,7 @@ class App extends Component {
 
    <Container fluid>
    <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
+   <Navbar.Brand>Hejthere - Jp is Fun</Navbar.Brand>
    <Navbar.Toggle />
    <Navbar.Collapse>
     <Nav id='navBar1' className='navBar' fill fluid>

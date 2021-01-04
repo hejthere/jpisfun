@@ -33,23 +33,23 @@ return (
 </Row>
 
 {/* / <!-- Introduction --> // */}
-<Container fluid='true' className="simple-introduction">
+<Container fluid='true' className="homepage-section1">
 <Image src={fuji} alt="FujiMountain" data-aos="fade-in" data-aos-delay="300" />
 <div>
 <h2> For Japanese Beginners </h2>
 <span> You could learn some basic Japanese Vocaburary and Grammar Practice in this website.</span><br />
 <br /><Link to='/katakana'>
-	<Button>MORE</Button></Link>
+	<Button disabled>MORE</Button></Link>
 </div>
 </Container> 
 
 {/* /* <!-- Japanese Vocab --> */ }
 
-<Container  fluid='true' className="homepage-japan-vocab">
+<Container  fluid='true' className="homepage-section2">
 	<div>
 	<h2> Japanese Vocaburary </h2>
 	<span> Learn Daily Japanese Vocaburary with Exercise and Audio. </span><br/><br/>
-	<Button>MORE</Button>
+	<Button disabled>MORE</Button>
 	</div>
 	<Image src={daruma} alt="Daruma" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" />
  </Container> 

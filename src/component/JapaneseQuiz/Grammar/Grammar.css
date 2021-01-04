@@ -1,28 +1,31 @@
   /* Grammar */
-.hiddenword{
-    color:red;
-      opacity: 0;}
-
-
-h5.description{ 
-padding: 10px;
-width:100%;
-text-align: left;
-background-color: var(--blue);
-color: white;
-}
-
-#momotaro { 
-text-align: left;
-font-size: 1.5rem;
-padding: 20px;
-}
-
-#translation { 
-font-size:1.5rem;
-text-align: left;
-padding:0.5rem;}
-
-.momotaro-pic {
-width: 300px;
-}
+  
+  .hiddenword {
+      font-size: 1.5rem;
+      color: red;
+      opacity: 0;
+  }
+  
+  h5.description {
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      background-color: var(--blue);
+      color: white;
+  }
+  
+  #momotaro {
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 20px;
+  }
+  
+  #translation {
+      font-size: 1.5rem;
+      text-align: left;
+      padding: 0.5rem;
+  }
+  
+  .momotaro-pic {
+      width: 300px;
+  }

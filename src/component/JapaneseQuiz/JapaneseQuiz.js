@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Grammar from './Grammar/Grammar';
 import Katakana from './katakana/Katakana';
 import Test from './Test/Test';
@@ -9,21 +9,22 @@ const JapaneseQuiz = () => {
 
     return (
         <Container fluid>
-            <section id="katakana">
+            <Row id="katakana">
                 <Katakana />
                 <br />
                 <br />
-            </section>
-            <section id="test">
+            </Row>
+            <Row id="test">
                 <Test />
                 <br />
                 <br />
-            </section>
-            <section id="grammar">
+            </Row>
+            <br /><br />
+            <Row id="grammar">
                 <Grammar />
                 <br />
                 <br />
-            </section>
+            </Row>
         </Container>
 
     )
