@@ -23,8 +23,8 @@ return (
 		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Quiz </h5> </Link>
  </Col>
  <Col className="menu-col" style={{ backgroundColor:'#ffcc00'}}>
-	<Link className="picturelink" to='/vocaburary'>
-		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Vocaburary </h5></Link>
+	<Link className="picturelink" to='/vocabulary'>
+		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Vocabulary </h5></Link>
  </Col>
 <Col className="menu-col" style={{ backgroundColor:'#aa5939'}}> 
 	<Link  className="picturelink" to='/resources'>
@@ -37,7 +37,7 @@ return (
 <Image src={fuji} alt="FujiMountain" data-aos="fade-in" data-aos-delay="300" />
 <div>
 <h2> For Japanese Beginners </h2>
-<span> You could learn some basic Japanese Vocaburary and Grammar Practice in this website.</span><br />
+<span> You could learn some basic Japanese Vocabulary and Grammar Practice in this website.</span><br />
 <br /><Link to='/katakana'>
 	<Button disabled>MORE</Button></Link>
 </div>
@@ -47,8 +47,8 @@ return (
 
 <Container  fluid='true' className="homepage-section2">
 	<div>
-	<h2> Japanese Vocaburary </h2>
-	<span> Learn Daily Japanese Vocaburary with Exercise and Audio. </span><br/><br/>
+	<h2> Japanese Vocabulary </h2>
+	<span> Learn Daily Japanese Vocabulary with Exercise and Audio. </span><br/><br/>
 	<Button disabled>MORE</Button>
 	</div>
 	<Image src={daruma} alt="Daruma" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" />

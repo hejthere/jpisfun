@@ -11,17 +11,18 @@ import './App.css';
 import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
 import Contact from './component/Contact/Contact'
 import Banner from './component/Home/Banner'
-import VocabDiseases from './component/Vocaburary/VocabDiseases';
+import VocabDiseases from './component/Vocabulary/VocabDiseases';
 import OtherResources from './component/Resources/OtherResources';
-import RandomQuote from './component/Vocaburary/RandomQuote';
+import RandomQuote from './component/Vocabulary/RandomQuote';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons'; 
 import towerimgage from '../src/Picture/Background.jpg'; 
 import miseimage from '../src/Picture/mise.jpg'; 
 import Katakana from './component/JapaneseQuiz/katakana/Katakana';
-import SavedQuotes from './component/Vocaburary/SavedQuotes';
+import SavedQuotes from './component/Vocabulary/SavedQuotes';
 import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
-import Vocaburary from './component/Vocaburary/Vocaburary';
+import Vocabulary from './component/Vocabulary/Vocabulary';
+import Kanji from './Kanji/Kanji';
 
 class App extends Component {  
 
@@ -33,7 +34,7 @@ class App extends Component {
 
    <Container fluid>
    <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
-   <Navbar.Brand>Hejthere - Jp is Fun</Navbar.Brand>
+   <Navbar.Brand className="homepage-brand">Hejthere - Jp is Fun</Navbar.Brand>
    <Navbar.Toggle />
    <Navbar.Collapse>
     <Nav id='navBar1' className='navBar' fill fluid>
@@ -43,12 +44,13 @@ class App extends Component {
         <NavDropdown.Item eventKey="1.2"><Link to="/quiz/test">(Level 2) Greetings</Link></NavDropdown.Item>
         <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 3) Grammar Practice</Link></NavDropdown.Item>
       </NavDropdown>
-      <NavDropdown title={<span><FontAwesomeIcon icon={faPencilAlt} /> Vocaburary</span>} id="nav-dropdown">
-        <NavDropdown.Item  eventKey="2.1"><Link to='/vocaburary/quotes'>Quotes of Today</Link></NavDropdown.Item>
-        <NavDropdown.Item  eventKey="2.2"><Link to="/vocaburary/vocabdiseases">Diseases</Link></NavDropdown.Item>
+      <NavDropdown title={<span><FontAwesomeIcon icon={faPencilAlt} /> Vocabulary</span>} id="nav-dropdown">
+        <NavDropdown.Item  eventKey="2.1"><Link to='/vocabulary/quotes'>Quotes of Today</Link></NavDropdown.Item>
+        <NavDropdown.Item  eventKey="2.2"><Link to="/vocabulary/vocabdiseases">Diseases</Link></NavDropdown.Item>
       </NavDropdown>
 		<Link className='nav-link' to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> 
     <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
+    <Link className='nav-link' to='/kanji'><FontAwesomeIcon icon={faAddressBook} /> Kanji</Link>
     </Nav>
     </Navbar.Collapse>
     </Navbar>
@@ -74,22 +76,26 @@ class App extends Component {
     <Banner  {...props} backgrounds={miseimage} />)}  />
   <Route path="/quiz" render={(props) => (
     <Banner  {...props} backgrounds={miseimage} />)}  />
-  <Route path="/vocaburary" render={(props) => (
+  <Route path="/vocabulary" render={(props) => (
     <Banner  {...props} backgrounds={miseimage} />)}  />
+  <Route path="/kanji" render={(props) => (
+      <Banner  {...props} backgrounds={miseimage} />)}  />
   </Switch> 
   
   <Switch>
   <Route path="/" exact component={Home} />
-  <Route path="/quiz/test" exact component={Test} /> 
-  <Route path="/quiz/grammar" exact component={Grammar} /> 
-  <Route path="/vocaburary/vocabdiseases" exact component={VocabDiseases} />
-  <Route path="/resources" exact component={OtherResources} />  
-  <Route path="/contactus" exact component={Contact} /> 
-  <Route path="/vocaburary/quotes" exact component={RandomQuote} />
-  <Route path="/quiz/katakana" exact component={Katakana} />
-  <Route path="/savedquotes" exact component={SavedQuotes} />
-  <Route path="/quiz" exact component={JapaneseQuiz} />
-  <Route path="/vocaburary" exact component={Vocaburary} />
+  <Route path="/quiz/test" component={Test} /> 
+  <Route path="/quiz/grammar" component={Grammar} /> 
+  <Route path="/vocabulary/vocabdiseases"  component={VocabDiseases} />
+  <Route path="/resources"  component={OtherResources} />  
+  <Route path="/contactus"  component={Contact} /> 
+  <Route path="/vocabulary/quotes"  component={RandomQuote} />
+  <Route path="/quiz/katakana"  component={Katakana} />
+  <Route path="/savedquotes"  component={SavedQuotes} />
+  <Route path="/quiz"  component={JapaneseQuiz} />
+  <Route path="/vocabulary"  component={Vocabulary} />
+  <Route path="/kanji"  component={Kanji} />  
+
   </Switch> 
 
    </div>

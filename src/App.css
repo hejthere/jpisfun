@@ -1,22 +1,24 @@
-
-.col{ 
-  padding:0px;
+.col {
+    padding: 0px;
 }
 
 .row {
-  margin:0px;
-
+    margin: 0px;
 }
 
-.navBar{
-  width:100%;
+.navBar {
+    width: 100%;
 }
 
-.container-fluid{
-  padding:0;
+.container-fluid {
+    padding: 0;
 }
 
-.container{
-  padding:0;
+.container {
+    padding: 0;
 }
 
+.homepage-brand {
+    font-weight: 900;
+    text-shadow: 3px 3px 2px rgb(105, 164, 212);
+}

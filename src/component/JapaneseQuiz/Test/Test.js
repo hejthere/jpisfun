@@ -5,56 +5,57 @@ import Button from 'react-bootstrap/Button';
 import './Test.css';
 import teacher from '../../../Picture/teacher.png';
 import { Container, Col } from 'react-bootstrap';
-import Card from './Card'; 
+import Card from './Card';
 
-class Test extends React.Component{
+class Test extends React.Component {
 	state = {
-	flipCards: [ 
-	{question:'How are you', answer:'お元気ですか' },
-	{question:'Thank You', answer:'ありがとう' },
-	{question:'Sorry', answer:'すみません'},
-	{question:'Goodbye', answer:'じゃね'},
-	{question:'Good Night', answer:'おやすみ' },
-	{question:'Add Oil', answer:'頑張って！' },
-	{question:'See you tmr', answer:'またあした'},
-	{question:'Take care', answer:'お大事に'},
-	]}
-	
-    // shownAnswerHandler =(number) => {
-    //     var result= document.getElementById('Answer'+number);
-    //     result.style.visibility='visible';}
-	
-    render (){ 
+		flipCards: [
+			{ question: 'How are you', answer: 'お元気ですか' },
+			{ question: 'Thank You', answer: 'ありがとう' },
+			{ question: 'Sorry', answer: 'すみません' },
+			{ question: 'Goodbye', answer: 'じゃね' },
+			{ question: 'Good Night', answer: 'おやすみ' },
+			{ question: 'Add Oil', answer: '頑張って！' },
+			{ question: 'See you tmr', answer: 'またあした' },
+			{ question: 'Take care', answer: 'お大事に' },
+		]
+	}
 
-	let cards =	this.state.flipCards.map( card => { 
-	return (
-	
-		<Card 
-		question={card.question}
-		answer={card.answer} /> 
-	)
-	})
+	// shownAnswerHandler =(number) => {
+	//     var result= document.getElementById('Answer'+number);
+	//     result.style.visibility='visible';}
+
+	render() {
+
+		let cards = this.state.flipCards.map(card => {
+			return (
+
+				<Card
+					question={card.question}
+					answer={card.answer} />
+			)
+		})
 
 
-    return (
-    <div>
-    <Row fluid className='introduction'> 
-    <Col xs={9}><h5 className='introduction'>
-    Level 2 : Do you know how to say the following greetings in Japanese?
+		return (
+			<div>
+				<Row fluid className='introduction'>
+					<Col xs={9}><h5 className='introduction'>
+						Level 2 : Do you know how to say the following greetings in Japanese?
     Press the button to check the answer ! </h5></Col>
-    <Col xs={3}><Image fluid src={teacher} className='introduction' alt='uketsuke'/></Col>
-    </Row>
+					<Col xs={3}><Image fluid src={teacher} className='introduction' alt='uketsuke' /></Col>
+				</Row>
 
 
-	<Container fluid>
-		<div className="card-container">  
-		{cards}
-		</div>
-	</Container>
-	<br /> 
-	
+				<Container fluid>
+					<div className="card-container">
+						{cards}
+					</div>
+				</Container>
+				<br />
 
-    {/* <Container fluid='true'>
+
+	{/* <Container fluid='true'>
 	<Row xs={2} sm={2} md={4} lg={4}>
 	<Col>
 	<div id= "Question"> How are you </div>
@@ -96,13 +97,14 @@ class Test extends React.Component{
 	</Row>
 
 	</Container> */}
-	
-    <Button onClick={()=>window.history.back}> Back </Button>
+
+				<Button onClick={() => window.history.back()}> Back </Button>
 
 
-    </div> 
-)
+			</div>
+		)
 
-}};
+	}
+};
 
 export default Test; 

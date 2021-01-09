@@ -21,7 +21,7 @@ class Katakana extends Component {
             { id: 9, katakana: 'け', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ke' },
             { id: 10, katakana: 'こ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ko' },],
         displayQuestion: 'あ',
-        displayOption:  ['a', 'i', 'u', 'e', 'o'],
+        displayOption: ['a', 'i', 'u', 'e', 'o'],
         displayAnswer: 'a',
 
         question2: [
@@ -36,7 +36,7 @@ class Katakana extends Component {
             { id: 9, katakana: 'ケ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ke' },
             { id: 10, katakana: 'コ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ko' },],
         displayQuestion2: 'ア',
-        displayOption2:  ['a', 'i', 'u', 'e', 'o'],
+        displayOption2: ['a', 'i', 'u', 'e', 'o'],
         displayAnswer2: 'a',
     }
 
@@ -98,7 +98,7 @@ class Katakana extends Component {
                     {option}</Button>
             )
         })
-        
+
         let options2 = '';
         options2 = this.state.displayOption2.map(option => {
             return (
@@ -114,28 +114,28 @@ class Katakana extends Component {
         return (
             <Container fluid>
                 <h5 className='katakana-introduction'>
-                Level 1: Do you know the romaji of the following katakana ? </h5>
+                    Level 1: Do you know the romaji of the following katakana ? </h5>
                 <Row xs={1} sm={1} md={2} xl={2}>
                     <Col>
-                <h5 className='katakana-header'>Hirakana Test</h5>
-                <div className='katakana-container'>
-                    <br />
-                    <p className='katakana-question'> {this.state.displayQuestion}</p>
-                </div>
-                {options}
-                <br />
-                <br />
-                </Col>
-                <Col>
-                <h5 className='katakana-header'>Katakan Test</h5>
-                <div className='katakana-container'>
-                    <br />
-                    <p className='katakana-question'> {this.state.displayQuestion2}</p>
-                </div>
-                {options2}
-                <br />
-                <br />
-                </Col>
+                        <h5 className='katakana-header'>Hirakana Test</h5>
+                        <div className='katakana-container'>
+                            <br />
+                            <p className='katakana-question'> {this.state.displayQuestion}</p>
+                        </div>
+                        {options}
+                        <br />
+                        <br />
+                    </Col>
+                    <Col>
+                        <h5 className='katakana-header'>Katakan Test</h5>
+                        <div className='katakana-container'>
+                            <br />
+                            <p className='katakana-question'> {this.state.displayQuestion2}</p>
+                        </div>
+                        {options2}
+                        <br />
+                        <br />
+                    </Col>
 
                 </Row>
             </Container>

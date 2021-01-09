@@ -2,7 +2,7 @@ import React from 'react';
 import RandomQuote from './RandomQuote';
 import VocabDiseases from './VocabDiseases';
 
-const Vocaburary =()=> {
+const Vocabulary =()=> {
 
 return (
 <div>
@@ -18,4 +18,4 @@ return (
 
 )}
 
-export default Vocaburary; 
+export default Vocabulary; 
