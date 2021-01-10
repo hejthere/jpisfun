@@ -42,7 +42,7 @@ const Kanji = () => {
     
     <Container className='kanji-container'>
       <h1>Kanji Dictionary</h1>
-      <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Input Kanji' value={typeKanji}/> 
+      <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Search Kanji' value={typeKanji}/> 
       <Button onClick={searchKanjiHandler}>Check</Button> </Row>
       <Row>
         <div className='kanji-div kanji'>{kanji}</div></Row>

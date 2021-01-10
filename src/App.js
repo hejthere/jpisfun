@@ -49,8 +49,8 @@ class App extends Component {
         <NavDropdown.Item  eventKey="2.2"><Link to="/vocabulary/vocabdiseases">Diseases</Link></NavDropdown.Item>
       </NavDropdown>
 		<Link className='nav-link' to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> 
-    <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
     <Link className='nav-link' to='/kanji'><FontAwesomeIcon icon={faAddressBook} /> Kanji</Link>
+    <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
     </Nav>
     </Navbar.Collapse>
     </Navbar>

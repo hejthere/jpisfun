@@ -33,7 +33,8 @@ return (
 </Row>
 
 {/* / <!-- Introduction --> // */}
-<Container fluid className="homepage-section1">
+<Container fluid>
+<div className="homepage-section1">
 <Image src={fuji} alt="FujiMountain" data-aos="fade-in" data-aos-delay="300" />
 <div>
 <h2> For Japanese Beginners </h2>
@@ -41,17 +42,21 @@ return (
 <br /><Link to='/katakana'>
 	<Button disabled>MORE</Button></Link>
 </div>
+</div>
 </Container> 
 
 {/* /* <!-- Japanese Vocab --> */ }
 
-<Container  fluid className="homepage-section2">
+<Container fluid >
+	<div className="homepage-section2">
 	<div>
 	<h2> Japanese Vocabulary </h2>
-	<span> Learn Daily Japanese Vocabulary with Exercise and Audio. </span><br/><br/>
+	<span> Learn Daily Japanese Vocabulary with Exercise and Audio. </span><br/>
+	<br/>
 	<Button disabled>MORE</Button>
 	</div>
 	<Image src={daruma} alt="Daruma" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" />
+	</div>
  </Container> 
  </div>
 
