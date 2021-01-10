@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {Col} from 'react-bootstrap';
-import './Test.css'
+import './Test.css';
 
 
 const Card = ( props )=> { 

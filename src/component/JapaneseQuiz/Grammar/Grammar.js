@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -12,7 +12,7 @@ import momotato from '../../../Picture/momotaro.png';
 const Grammar = props => {
 
 
-    const [audio, setAudio] = useState();
+    const [audio] = useState();
 
     const showAnswerHandler = (event) => event.target.style.opacity = '1';
 

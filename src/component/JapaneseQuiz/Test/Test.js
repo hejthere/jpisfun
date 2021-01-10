@@ -55,7 +55,7 @@ class Test extends React.Component {
 				<br />
 
 
-	{/* <Container fluid='true'>
+	{/* <Container fluid>
 	<Row xs={2} sm={2} md={4} lg={4}>
 	<Col>
 	<div id= "Question"> How are you </div>

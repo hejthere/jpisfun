@@ -17,7 +17,7 @@ const home = props => {
 
 return (
 <div>
-<Row xs={1} sm={1} md={3} lg={3} fluid='true' className="menu"> 
+<Row xs={1} sm={1} md={3} lg={3} fluid className="menu"> 
 <Col className="menu-col"style={{ backgroundColor:'#496D89'}} >
 	<Link className="picturelink" to='/quiz'>
 		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Quiz </h5> </Link>
@@ -33,7 +33,7 @@ return (
 </Row>
 
 {/* / <!-- Introduction --> // */}
-<Container fluid='true' className="homepage-section1">
+<Container fluid className="homepage-section1">
 <Image src={fuji} alt="FujiMountain" data-aos="fade-in" data-aos-delay="300" />
 <div>
 <h2> For Japanese Beginners </h2>
@@ -45,7 +45,7 @@ return (
 
 {/* /* <!-- Japanese Vocab --> */ }
 
-<Container  fluid='true' className="homepage-section2">
+<Container  fluid className="homepage-section2">
 	<div>
 	<h2> Japanese Vocabulary </h2>
 	<span> Learn Daily Japanese Vocabulary with Exercise and Audio. </span><br/><br/>
