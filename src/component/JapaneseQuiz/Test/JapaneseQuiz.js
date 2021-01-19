@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Grammar from './Grammar/Grammar';
-import Katakana from './katakana/Katakana';
-import Test from './Test/Test';
+import Grammar from '../Grammar/Grammar';
+import Katakana from '../katakana/Katakana';
+import Test from '../Test/Test';
 import './JapaneseQuiz.css';
 
 const JapaneseQuiz = () => {

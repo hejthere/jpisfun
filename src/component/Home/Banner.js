@@ -8,7 +8,7 @@ const Banner = props => {
 return ( 
 
 <Container className='bannerContainer' fluid> 
-<Image src={props.backgrounds} className='banner-image' alt='background' fluid style={{'opacity':'0.5'}}/>
+<Image src={props.backgrounds} className='banner-image' alt='background' fluid style={{'opacity':'0.65'}}/>
 <h2 className="bannertext"> ようこそ</h2>
 </Container>
 )}

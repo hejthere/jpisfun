@@ -28,3 +28,10 @@
     margin: auto;
     width: 70%
 }
+
+.kanji-introduction {
+    background-color: var(--yellow);
+    color: white;
+    width: 100%;
+    padding: 15px;
+}

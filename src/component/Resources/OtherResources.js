@@ -59,7 +59,7 @@ return (
 {playButton}
 </div>
 </Col>
-<Col> 
+<Col className='video-container'> 
 <br />
 <br />
 {videoFrame}

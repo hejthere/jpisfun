@@ -16,13 +16,14 @@ import OtherResources from './component/Resources/OtherResources';
 import RandomQuote from './component/Vocabulary/RandomQuote';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons'; 
-import towerimgage from '../src/Picture/Background.jpg'; 
+import towerimgage from '../src/Picture/Background.jpeg'; 
 import miseimage from '../src/Picture/mise.jpg'; 
 import Katakana from './component/JapaneseQuiz/katakana/Katakana';
 import SavedQuotes from './component/Vocabulary/SavedQuotes';
-import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
+import JapaneseQuiz from './component/JapaneseQuiz/Test/JapaneseQuiz';
 import Vocabulary from './component/Vocabulary/Vocabulary';
-import Kanji from './Kanji/Kanji';
+import Kanji from './component/Kanji/Kanji';
+import Footer from './component/Home/Footer'
 
 class App extends Component {  
 
@@ -45,11 +46,11 @@ class App extends Component {
         <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 3) Grammar Practice</Link></NavDropdown.Item>
       </NavDropdown>
       <NavDropdown title={<span><FontAwesomeIcon icon={faPencilAlt} /> Vocabulary</span>} id="nav-dropdown">
-        <NavDropdown.Item  eventKey="2.1"><Link to='/vocabulary/quotes'>Quotes of Today</Link></NavDropdown.Item>
-        <NavDropdown.Item  eventKey="2.2"><Link to="/vocabulary/vocabdiseases">Diseases</Link></NavDropdown.Item>
+        <NavDropdown.Item  eventKey="2.1"><Link to='/vocabulary/kanji'>Kanji</Link></NavDropdown.Item>
+        <NavDropdown.Item  eventKey="2.2"><Link to='/vocabulary/quotes'>Quotes of Today</Link></NavDropdown.Item>
+        <NavDropdown.Item  eventKey="2.3"><Link to="/vocabulary/vocabdiseases">Diseases</Link></NavDropdown.Item>
       </NavDropdown>
 		<Link className='nav-link' to='/resources'><FontAwesomeIcon icon={faGlasses} /> Resources</Link> 
-    <Link className='nav-link' to='/kanji'><FontAwesomeIcon icon={faAddressBook} /> Kanji</Link>
     <Link className='nav-link' to='/contactus'><FontAwesomeIcon icon={faAddressBook} /> Contact Us</Link>
     </Nav>
     </Navbar.Collapse>
@@ -93,11 +94,11 @@ class App extends Component {
   <Route path="/quiz/katakana"  component={Katakana} />
   <Route path="/savedquotes"  component={SavedQuotes} />
   <Route path="/quiz"  component={JapaneseQuiz} />
-  <Route path="/vocabulary"  component={Vocabulary} />
-  <Route path="/kanji"  component={Kanji} />  
+  <Route path="/vocabulary" exact component={Vocabulary} />
+  <Route path="/vocabulary/kanji"  component={Kanji} />  
 
   </Switch> 
-
+  <Footer />
    </div>
     )}}
     

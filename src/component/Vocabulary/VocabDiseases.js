@@ -14,7 +14,7 @@ render (){
 return ( 
 
 <Container fluid>
-<Row><h2 className="saved-Quotes-title">Learn Vocabulary: Diseases</h2></Row>
+<Row><h2 className="diseases-title">Learn Vocabulary: Diseases</h2></Row>
 <Image fluid src={sickguy} alt='sickguy' />
 
 

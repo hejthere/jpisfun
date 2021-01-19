@@ -1,29 +1,33 @@
-.quotebox{ 
-background-color:#b3b3b31A;
-margin: auto;
-box-shadow:5px 5px 5px #b3b3b3;
-margin:10px 20px 0px 20px;
+.quotebox {
+    background-color: #b3b3b31A;
+    margin: auto;
+    box-shadow: 5px 5px 5px #b3b3b3;
+    margin: 10px 20px 0px 20px;
 }
 
 .japanesequote {
-font-size:2rem;
-padding:10px
+    font-size: 2rem;
+    padding: 10px
 }
-
 
 .englishquote {
-color:var(--red);
-font-size:1.5rem;
-padding:5px;
+    color: var(--red);
+    font-size: 1.5rem;
+    padding: 5px;
 }
 
-.saved-Quotes-title{
-text-align: center;
-background-color:var(--red);
-color:white;
-width:100%;
-padding: 10px 0px;
+.saved-Quotes-title {
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
 }
 
-
-
+.diseases-title {
+    text-align: center;
+    background-color: var(--red);
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+}

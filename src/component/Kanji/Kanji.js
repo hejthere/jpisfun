@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Container , Row, Col, Button} from 'react-bootstrap';
+import {Container , Row, Button} from 'react-bootstrap';
 import './Kanji.css'
 
 const Kanji = () => {
@@ -24,8 +24,13 @@ const Kanji = () => {
       setKunyomi(kunyomi)
       setOnyomi(onyomi)
     })
-    .catch(error => console.log(error));
-  }, [inputKanji])
+    .catch(error =>{
+      console.log(error)
+      setKanji('Not Found!')
+      setMeanings('/')
+      setKunyomi('/')
+      setOnyomi('/')
+  }, [inputKanji])})
 
   const kanjiOnChangeHandler =(e) => {
   const kanjiInInput =  e.target.value;
@@ -34,14 +39,13 @@ const Kanji = () => {
 
   const searchKanjiHandler =()=> {
     const searchKanji = document.getElementById('searchKanji').value;
-    console.log(searchKanji);
     setInputKanji(searchKanji);
   }
 
   return (
-    
+    <Container fluid> 
+    <h4 className='kanji-introduction'>Kanji Dictionary</h4>
     <Container className='kanji-container'>
-      <h1>Kanji Dictionary</h1>
       <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Search Kanji' value={typeKanji}/> 
       <Button onClick={searchKanjiHandler}>Check</Button> </Row>
       <Row>
@@ -57,6 +61,7 @@ const Kanji = () => {
       <br />
       <br />
     </Container>
+    </Container> 
   )
 }
 
