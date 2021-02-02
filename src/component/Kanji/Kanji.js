@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Container , Row, Button} from 'react-bootstrap';
+import {Container , Row, Button, Spinner} from 'react-bootstrap';
 import './Kanji.css'
 
 const Kanji = () => {
@@ -9,7 +9,8 @@ const Kanji = () => {
   const [kunyomi, setKunyomi] = useState();
   const [onyomi, setOnyomi] = useState();
   const [typeKanji , setTypeKanji] = useState();
-  const [inputKanji , setInputKanji] =useState('暇'); 
+  const [inputKanji , setInputKanji] =useState('例'); 
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(`https://kanjiapi.dev/v1/kanji/${inputKanji}`)
@@ -23,6 +24,7 @@ const Kanji = () => {
       setMeanings(meanings)
       setKunyomi(kunyomi)
       setOnyomi(onyomi)
+      setLoading(false)
     })
     .catch(error =>{
       console.log(error)
@@ -40,6 +42,7 @@ const Kanji = () => {
   const searchKanjiHandler =()=> {
     const searchKanji = document.getElementById('searchKanji').value;
     setInputKanji(searchKanji);
+    setLoading(true);
   }
 
   return (
@@ -48,6 +51,11 @@ const Kanji = () => {
     <Container className='kanji-container'>
       <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Search Kanji' value={typeKanji}/> 
       <Button onClick={searchKanjiHandler}>Check</Button> </Row>
+    {loading && 
+    <Spinner animation="border" role="status">
+  <span className="sr-only">Loading...</span>
+</Spinner>}
+
       <Row>
         <div className='kanji-div kanji'>{kanji}</div></Row>
       <Row>

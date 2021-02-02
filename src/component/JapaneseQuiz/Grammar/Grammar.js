@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -30,8 +30,8 @@ const Grammar = props => {
     return (
         <Container fluid>
             <h5 className='description'>
-                Level 3 : Do you know which particle should be used in the following article ?
-    Click the space to view the answer. </h5><br />
+                Level 3 : Do you know which particles should be used in the following article ?
+                 Click on the ( ) to view the answer. </h5><br />
 
             <Row sm={1} xs={1} md={2} lg={2} id='momotaro-container'>
                 <Col id='momotaro' >

@@ -98,9 +98,9 @@ class Test extends React.Component {
 
 	</Container> */}
 
-				<Button onClick={() => window.history.back()}> Back </Button>
-
-
+			<Button onClick={() => window.history.back()}> Back </Button>
+			<br />
+			<br />
 			</div>
 		)
 

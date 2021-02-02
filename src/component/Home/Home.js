@@ -18,17 +18,17 @@ const home = props => {
 return (
 <div>
 <Row xs={1} sm={1} md={3} lg={3} fluid className="menu"> 
-<Col className="menu-col"style={{ backgroundColor:'#496D89'}} >
+<Col className="menu-col px-3"style={{ backgroundColor:'#496D89'}} >
 	<Link className="picturelink" to='/quiz'>
 		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Quiz </h5> </Link>
  </Col>
- <Col className="menu-col" style={{ backgroundColor:'#ffcc00'}}>
+ <Col className="menu-col px-3" style={{ backgroundColor:'#ffcc00'}}>
 	<Link className="picturelink" to='/vocabulary'>
 		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Vocabulary </h5></Link>
  </Col>
-<Col className="menu-col" style={{ backgroundColor:'#aa5939'}}> 
+<Col className="menu-col px-3" style={{ backgroundColor:'#aa5939'}}> 
 	<Link  className="picturelink" to='/resources'>
-		<Image src ={food} className="subpagelink" alt='food' /> <h5 className="subpagelinkword"> &nbsp; Resources </h5></Link>
+		<Image src ={food} className="subpagelink" alt='food' /> <h5 className="subpagelinkword"> &nbsp;&nbsp;&nbsp; Resources </h5></Link>
 </Col> 
 </Row>
 

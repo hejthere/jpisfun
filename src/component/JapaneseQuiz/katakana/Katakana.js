@@ -114,7 +114,7 @@ class Katakana extends Component {
         return (
             <Container fluid>
                 <h5 className='katakana-introduction'>
-                    Level 1: Do you know the romaji of the following katakana ? </h5>
+                    Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5>
                 <Row xs={1} sm={1} md={2} xl={2}>
                     <Col>
                         <h5 className='katakana-header'>Hirakana Test</h5>
@@ -127,7 +127,7 @@ class Katakana extends Component {
                         <br />
                     </Col>
                     <Col>
-                        <h5 className='katakana-header'>Katakan Test</h5>
+                        <h5 className='katakana-header'>Katakana Test</h5>
                         <div className='katakana-container'>
                             <br />
                             <p className='katakana-question'> {this.state.displayQuestion2}</p>

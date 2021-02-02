@@ -54,7 +54,7 @@ return (
 <Container fluid> 
 <Row fluid xs={1} sm={1} md={2}>
 <Col> 
-<p className='introductionResource'> <FontAwesomeIcon icon={faHandPointDown} /> Select an video to watch <FontAwesomeIcon icon={faHandPointDown} /></p> 
+<div className='introductionResource'> <FontAwesomeIcon icon={faHandPointDown} /> Select an video to watch</div> 
 <div className='video-button-container'>
 {playButton}
 </div>
