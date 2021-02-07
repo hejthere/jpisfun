@@ -1,20 +1,20 @@
 import React from 'react'
 import '../../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons'; 
-import {Navbar , Container, Nav, NavDropdown} from 'react-bootstrap';
+import { faIgloo, faVial, faAddressBook, faPencilAlt, faGlasses } from '@fortawesome/free-solid-svg-icons';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 
 export default function NavBar() {
 
     return (
-        <Container fluid>
+        <Container fluid="true">
             <Navbar collapseOnSelect expand='md' bg="dark" variant="dark">
                 <Navbar.Brand className="homepage-brand">Hejthere</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse>
-                    <Nav id='navBar1' className='navBar' fill fluid>
+                    <Nav id='navBar1' className='navBar' fill fluid="true">
                         <Link className='nav-link' to='/'><FontAwesomeIcon icon={faIgloo} /> Home</Link>
                         <NavDropdown title={<span><FontAwesomeIcon icon={faVial} /> Quiz</span>} id="nav-dropdown">
                             <NavDropdown.Item eventKey="1.1"><Link to="/quiz/katakana">(Level 1) Katakana Test</Link></NavDropdown.Item>

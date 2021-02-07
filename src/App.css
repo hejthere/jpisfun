@@ -22,3 +22,7 @@
     text-shadow: 2px 1px 1px rgb(121, 122, 122);
     font-family: 'Lobster', cursive;
 }
+
+.btn {
+    margin: 3px 10px;
+}

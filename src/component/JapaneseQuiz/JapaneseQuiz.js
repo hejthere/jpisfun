@@ -1,14 +1,13 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Grammar from '../Grammar/Grammar';
-import Katakana from '../katakana/Katakana';
-import Test from '../Test/Test';
-import './JapaneseQuiz.css';
+import Grammar from './Grammar/Grammar';
+import Katakana from './Katakana/Katakana';
+import Test from './JpTest/Jptest';
 
 const JapaneseQuiz = () => {
 
     return (
-        <Container fluid>
+        <Container fluid="true">
             <Row id="katakana">
                 <Katakana />
                 <br />

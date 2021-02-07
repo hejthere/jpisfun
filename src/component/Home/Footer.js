@@ -8,7 +8,7 @@ import '../../App.css'
 
 export default function Footer() {
     return (
-        <Container fluid className='footer-container'>
+        <Container fluid="true" className='footer-container'>
             <Row xs={2} sm={3} lg={3} xl={3} className='p-2 px-5'>
                 <Col className='text-left'>
                     <h3 className='homepage-brand'>Hejthere</h3>
@@ -22,7 +22,7 @@ export default function Footer() {
                         <FontAwesomeIcon icon={faEnvelope} /> abd@abc.com </div>
                 </Col>
 
-                <Col className='text-left'> 
+                <Col className='text-left'>
                     <h5><b>Social Media</b></h5>
                     <div>
                         <FontAwesomeIcon icon={faFacebook} size='2x' /> &nbsp;

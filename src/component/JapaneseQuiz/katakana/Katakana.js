@@ -10,52 +10,30 @@ class Katakana extends Component {
 
     state = {
         question: [
-            { id: 1, katakana: 'あ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'a' },
-            { id: 2, katakana: 'い', option: ['a', 'i', 'u', 'e', 'o'], answer: 'i' },
-            { id: 3, katakana: 'う', option: ['a', 'i', 'u', 'e', 'o'], answer: 'u' },
-            { id: 4, katakana: 'え', option: ['a', 'i', 'u', 'e', 'o'], answer: 'u' },
-            { id: 5, katakana: 'お', option: ['a', 'i', 'u', 'e', 'o'], answer: 'o' },
-            { id: 6, katakana: 'か', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ka' },
-            { id: 7, katakana: 'き', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ki' },
-            { id: 8, katakana: 'く', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ku' },
-            { id: 9, katakana: 'け', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ke' },
-            { id: 10, katakana: 'こ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ko' },],
-        displayQuestion: 'あ',
-        displayOption: ['a', 'i', 'u', 'e', 'o'],
-        displayAnswer: 'a',
-
-        question2: [
-            { id: 1, katakana: 'ア', option: ['a', 'i', 'u', 'e', 'o'], answer: 'a' },
-            { id: 2, katakana: 'イ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'i' },
-            { id: 3, katakana: 'ウ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'u' },
-            { id: 4, katakana: 'エ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'u' },
-            { id: 5, katakana: 'オ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'o' },
-            { id: 6, katakana: 'カ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ka' },
-            { id: 7, katakana: 'き', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ki' },
-            { id: 8, katakana: 'ク', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ku' },
-            { id: 9, katakana: 'ケ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ke' },
-            { id: 10, katakana: 'コ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ko' },],
-        displayQuestion2: 'ア',
-        displayOption2: ['a', 'i', 'u', 'e', 'o'],
-        displayAnswer2: 'a',
+            { id: 1, hirakana: 'あ', katakana: 'ア', option: ['a', 'i', 'u', 'e', 'o'], answer: 'a' },
+            { id: 2, hirakana: 'い', katakana: 'イ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'i' },
+            { id: 3, hirakana: 'う', katakana: 'ウ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'u' },
+            { id: 4, hirakana: 'え', katakana: 'エ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'e' },
+            { id: 5, hirakana: 'お', katakana: 'オ', option: ['a', 'i', 'u', 'e', 'o'], answer: 'o' },
+            { id: 6, hirakana: 'か', katakana: 'カ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ka' },
+            { id: 7, hirakana: 'き', katakana: 'き', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ki' },
+            { id: 8, hirakana: 'く', katakana: 'ク', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ku' },
+            { id: 9, hirakana: 'け', katakana: 'ケ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ke' },
+            { id: 10, hirakana: 'こ', katakana: 'コ', option: ['ka', 'ki', 'ku', 'ke', 'ko'], answer: 'ko' },],
+        quizCard: [
+            { id: 101, text: 'Hirakana Test', displayQuestion: 'あ', displayOption: ['a', 'i', 'u', 'e', 'o'], displayAnswer: 'a' },
+            { id: 102, text: 'Katakana Test', displayQuestion: 'ア', displayOption: ['a', 'i', 'u', 'e', 'o'], displayAnswer: 'a' }
+        ]
     }
 
-
-    answerHandler = (e) => {
-        if (e.target.innerHTML === this.state.displayAnswer) {
+    resetAnswerHandler = (e, isCorrect) => {
+        if (isCorrect) {
             alert('correct!');
-            let randomNumber = Math.floor(Math.random() * 10);
-            this.setState({
-                displayQuestion: this.state.question[randomNumber].katakana,
-                displayOption: this.state.question[randomNumber].option,
-                displayAnswer: this.state.question[randomNumber].answer
-            })
             let button = document.getElementsByClassName('katakana-button');
             var i;
             for (i = 0; i < button.length; i++) {
                 button[i].style.border = '2px solid var(--blue)';
                 button[i].style.color = 'white';
-
             }
         } else {
             e.target.style.color = 'red'
@@ -63,80 +41,78 @@ class Katakana extends Component {
         }
     }
 
-    answerHandler2 = (e) => {
-        if (e.target.innerHTML === this.state.displayAnswer2) {
-            alert('correct!');
+    answerHandler = (e) => {
+        if (e.target.innerHTML === this.state.quizCard[0].displayAnswer) {
             let randomNumber = Math.floor(Math.random() * 10);
-            this.setState({
-                displayQuestion2: this.state.question2[randomNumber].katakana,
-                displayOption2: this.state.question2[randomNumber].option,
-                displayAnswer2: this.state.question2[randomNumber].answer
-            })
-            let button = document.getElementsByClassName('katakana-button2');
-            var i;
-            for (i = 0; i < button.length; i++) {
-                button[i].style.border = '2px solid var(--blue)';
-                button[i].style.color = 'white';
-
-            }
+            const updatedQuizCard = [...this.state.quizCard]
+            updatedQuizCard[0].displayQuestion = this.state.question[randomNumber].hirakana
+            updatedQuizCard[0].displayOption = this.state.question[randomNumber].option
+            updatedQuizCard[0].displayAnswer = this.state.question[randomNumber].answer
+            this.setState({ quizCard: updatedQuizCard })
+            this.resetAnswerHandler(e, true)
         } else {
-            e.target.style.color = 'red'
-            e.target.style.border = '2px solid red'
+            this.resetAnswerHandler(e, false)
+        }
+    }
+
+    answerHandler2 = (e) => {
+        if (e.target.innerHTML === this.state.quizCard[1].displayAnswer) {
+            let randomNumber = Math.floor(Math.random() * 10);
+            const updatedQuizCard = [...this.state.quizCard]
+            updatedQuizCard[1].displayQuestion = this.state.question[randomNumber].katakana
+            updatedQuizCard[1].displayOption = this.state.question[randomNumber].option
+            updatedQuizCard[1].displayAnswer = this.state.question[randomNumber].answer
+            this.setState({ quizCard: updatedQuizCard })
+            this.resetAnswerHandler(e, true)
+        } else {
+            this.resetAnswerHandler(e, false)
         }
     }
 
 
     render() {
-
-        let options = '';
-        options = this.state.displayOption.map(option => {
+        let quizBoxContent = [];
+        quizBoxContent = this.state.quizCard.map(option => {
             return (
-                <Button
-                    className='katakana-button'
-                    onClick={this.answerHandler}
-                    key={option.id}>
-                    {option}</Button>
-            )
-        })
+                <Col key={option.id}>
+                    <h5 className='katakana-header'>{option.title}</h5>
+                    <div className='katakana-container'>
+                        <br />
+                        <p className='katakana-question'>{option.displayQuestion}</p>
+                    </div>
+                    { option.id === 101 ?
+                        (option.displayOption.map(option => {
+                            return (
+                                <Button
+                                    key={option}
+                                    className='katakana-button'
+                                    onClick={this.answerHandler}>
+                                    {option}
+                                </Button>)
+                        })) :
+                        (option.displayOption.map(option => {
+                            return (
+                                <Button
+                                    key={option}
+                                    className='katakana-button'
+                                    onClick={this.answerHandler2}>
+                                    {option}
+                                </Button>)
+                        }))
+                    }
 
-        let options2 = '';
-        options2 = this.state.displayOption2.map(option => {
-            return (
-                <Button
-                    className='katakana-button2'
-                    onClick={this.answerHandler2}
-                    key={option.id}>
-                    {option}</Button>
+                    <br />
+                </Col >
             )
         })
 
 
         return (
-            <Container fluid>
+            <Container fluid="true" >
                 <h5 className='katakana-introduction'>
                     Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5>
                 <Row xs={1} sm={1} md={2} xl={2}>
-                    <Col>
-                        <h5 className='katakana-header'>Hirakana Test</h5>
-                        <div className='katakana-container'>
-                            <br />
-                            <p className='katakana-question'> {this.state.displayQuestion}</p>
-                        </div>
-                        {options}
-                        <br />
-                        <br />
-                    </Col>
-                    <Col>
-                        <h5 className='katakana-header'>Katakana Test</h5>
-                        <div className='katakana-container'>
-                            <br />
-                            <p className='katakana-question'> {this.state.displayQuestion2}</p>
-                        </div>
-                        {options2}
-                        <br />
-                        <br />
-                    </Col>
-
+                    {quizBoxContent}
                 </Row>
             </Container>
         )

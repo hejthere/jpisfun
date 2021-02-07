@@ -4,12 +4,12 @@
     overflow: hidden;
 }
 
-.subpagelink {
+.subpage-link {
     height: 6rem;
     float: left;
 }
 
-.subpagelinkword {
+.subpage-link-word {
     position: absolute;
     text-align: left;
     color: black;
@@ -18,10 +18,17 @@
     transform: translate(-50%, -50%);
 }
 
-a.picturelink {
+a.picture-link {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.menu-col {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    transform: scale(1);
+    transition: all 0.5s;
 }
 
 .menu .menu-col:hover {
@@ -59,7 +66,7 @@ a.picturelink {
 
 /* banner  */
 
-.bannertext {
+.banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,7 +74,7 @@ a.picturelink {
     color: var(--blue);
 }
 
-.bannerContainer {
+.banner-container {
     position: relative;
     height: auto;
 }

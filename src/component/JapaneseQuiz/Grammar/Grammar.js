@@ -11,24 +11,22 @@ import momotato from '../../../Picture/momotaro.png';
 
 const Grammar = props => {
 
-
     const [audio] = useState();
 
     const showAnswerHandler = (event) => event.target.style.opacity = '1';
 
     const showTranslationHandler = () => {
         const translationdiv = document.getElementById('translation');
-        console.log(translationdiv);
         translationdiv.textContent = 'Momo-taro is a boy who was born from a peach. To save the villagers, he started a journey to fight against the Demons. It is a story about how Momo-taro and the animals friends he met on his way defeated the Demons.';
         translationdiv.style.fontSize = '1.5rem';
     }
 
     const readAloudHandler = () => {
-        document.getElementById('hey').play();
+        document.getElementById('audio').play();
     }
 
     return (
-        <Container fluid>
+        <Container fluid="true">
             <h5 className='description'>
                 Level 3 : Do you know which particles should be used in the following article ?
                  Click on the ( ) to view the answer. </h5><br />
@@ -40,7 +38,7 @@ const Grammar = props => {
 
 
             <Button onClick={readAloudHandler}>Listen</Button>
-            <audio id="hey" controls hidden src='http://api.voicerss.org/?key=00ae74bcb9584b048364d0b930dfff93&hl=ja-jp&v=fumi&r=-4&c=MP3&src=桃からうまれたももたろうというおとこのこは、村の人たちをたすけるためにおにたいじに向かいます。道中でどうぶつたちとであい、なかまとなり、ともに鬼たいじにいどむお話です。'></audio>
+            <audio id="audio" controls hidden src='http://api.voicerss.org/?key=00ae74bcb9584b048364d0b930dfff93&hl=ja-jp&v=fumi&r=-4&c=MP3&src=桃からうまれたももたろうというおとこのこは、村の人たちをたすけるためにおにたいじに向かいます。道中でどうぶつたちとであい、なかまとなり、ともに鬼たいじにいどむお話です。'></audio>
 
             <Button onClick={showTranslationHandler}>See Translation</Button>
             <div id='translation'></div>
