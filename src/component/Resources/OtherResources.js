@@ -8,8 +8,8 @@ import Col from 'react-bootstrap/Col';
 
 
 import './OtherResources.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandPointDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHandPointDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const OtherResources = () => {
@@ -49,7 +49,8 @@ const OtherResources = () => {
             <Row fluid="true" xs={1} sm={1} md={2}>
                 <Col>
                     <div className='introductionResource'>
-                        <FontAwesomeIcon icon={faHandPointDown} /> Select an video to watch</div>
+                        {/* <FontAwesomeIcon icon={faHandPointDown} />  */}
+                        Select an video to watch</div>
                     <div className='video-button-container'>
                         {playButton}
                     </div>
