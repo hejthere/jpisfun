@@ -108,9 +108,10 @@ class Katakana extends Component {
 
 
         return (
-            <Container fluid="true" >
-                <h5 className='katakana-introduction'>
-                    Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5>
+            <Container fluid="true" className="w-100">
+                <Row fluid="true">
+                    <h5 className='title-bar bg-yellow'>
+                        Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5></Row>
                 <Row xs={1} sm={1} md={2} xl={2}>
                     {quizBoxContent}
                 </Row>

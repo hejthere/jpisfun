@@ -1,17 +1,5 @@
 /* Test your knowledge */
 
-.introduction {
-    background-color: #551800;
-}
-
-h5.introduction {
-    color: white;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 10px;
-}
-
 img.introduction {
     width: 100px;
     display: inline-block;

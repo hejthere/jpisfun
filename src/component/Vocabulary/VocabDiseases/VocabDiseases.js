@@ -12,7 +12,7 @@ class VocabDiseases extends Component {
         return (
 
             <Container fluid="true">
-                <Row><h2 className="diseases-title">Learn Vocabulary: Diseases</h2></Row>
+                <Row><h3 className="title-bar bg-red">Learn Vocabulary: Diseases</h3></Row>
                 <Image fluid="true" src={sickguy} alt='sickguy' />
 
 

@@ -27,7 +27,7 @@ const Grammar = props => {
 
     return (
         <Container fluid="true">
-            <h5 className='description'>
+            <h5 className='title-bar bg-blue'>
                 Level 3 : Do you know which particles should be used in the following article ?
                  Click on the ( ) to view the answer. </h5><br />
 

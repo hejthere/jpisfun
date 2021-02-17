@@ -23,7 +23,7 @@ const SavedQuotes = () => {
 
     return (
         <Container fluid="true">
-            <Row><h2 className="saved-Quotes-title">Saved Quotes</h2></Row>
+            <Row><h3 className="title-bar bg-yellow">Saved Quotes</h3></Row>
             {displayQuotes}
             <Button onClick={() => window.history.back()}>Back</Button>
         </Container>

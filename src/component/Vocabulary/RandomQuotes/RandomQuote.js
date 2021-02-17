@@ -58,7 +58,7 @@ class RandomQuote extends Component {
 
         return (
             <Container fluid="true">
-                <Row><h2 className="saved-Quotes-title">Try and Get a random Ghibli Quote!</h2></Row>
+                <Row><h3 className="title-bar bg-blue">Try and Get a random Ghibli Quote!</h3></Row>
                 <Quotes
                     japaneseQuote={this.state.generatedQuote.japanese}
                     englishQuote={this.state.generatedQuote.english}

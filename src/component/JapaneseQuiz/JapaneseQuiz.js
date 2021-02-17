@@ -8,21 +8,15 @@ const JapaneseQuiz = () => {
 
     return (
         <Container fluid="true">
-            <Row id="katakana">
+            <Row id="katakana" >
                 <Katakana />
-                <br />
-                <br />
             </Row>
-            <Row id="test">
+            <Row id="test" className="my-3">
                 <Test />
-                <br />
-                <br />
             </Row>
             <br /><br />
-            <Row id="grammar">
+            <Row id="grammar" className="my-3">
                 <Grammar />
-                <br />
-                <br />
             </Row>
         </Container>
 

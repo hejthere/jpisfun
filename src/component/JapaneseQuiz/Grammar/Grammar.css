@@ -6,14 +6,6 @@
       opacity: 0;
   }
   
-  h5.description {
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      background-color: var(--blue);
-      color: white;
-  }
-  
   #momotaro {
       text-align: left;
       font-size: 1.5rem;

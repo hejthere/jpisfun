@@ -26,3 +26,34 @@
 .btn {
     margin: 3px 10px;
 }
+
+.title-bar {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    color: white;
+}
+
+.bg-blue {
+    background: var(--blue);
+}
+
+.bg-red {
+    background: var(--red);
+}
+
+.bg-yellow {
+    background: var(--yellow);
+}
+
+.bg-yellow-500 {
+    background: var(--yellow-500);
+}
+
+.bg-yellow-100 {
+    background: var(--yellow-100);
+}
+
+.bg-blue-100 {
+    background: var(--blue-100);
+}

@@ -33,9 +33,10 @@ class Test extends React.Component {
 		})
 		return (
 			<div>
-				<Row fluid="true" className='introduction'>
-					<Col xs={9}><h5 className='introduction'>
-						Level 2 : Do you know how to say the following greetings in Japanese?
+				<Row fluid="true" className='title-bar bg-red'>
+					<Col xs={9}>
+						<h5>
+							Level 2 : Do you know how to say the following greetings in Japanese?
     Press the button to check the answer ! </h5></Col>
 					<Col xs={3}><Image fluid="true"
 						src={teacher} className='introduction' alt='uketsuke' /></Col>

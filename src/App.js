@@ -35,25 +35,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact render={(props) => (
             <Banner  {...props} backgrounds={towerimgage} />)} />
-          <Route path="/test" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/grammar" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/vocabdiseases" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/resources" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/contactus" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/quotes" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/katakana" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/quiz" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/vocabulary" render={(props) => (
-            <Banner  {...props} backgrounds={miseimage} />)} />
-          <Route path="/kanji" render={(props) => (
+          <Route render={(props) => (
             <Banner  {...props} backgrounds={miseimage} />)} />
         </Switch>
 
@@ -73,6 +55,8 @@ class App extends Component {
           <Route path="/resources" component={OtherResources} />
           <Route path="/contactus" component={Contact} />
 
+          {/* default */}
+          <Route component={Home} />
         </Switch>
         <Footer />
       </div>
