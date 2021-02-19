@@ -1,26 +1,31 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import Grammar from './Grammar/Grammar';
-import Katakana from './Katakana/Katakana';
-import Test from './JpTest/Jptest';
+import Katakana from './katakana/Katakana';
+import Test from './Test/Test';
+import './JapaneseQuiz.css';
 
-const JapaneseQuiz = () => {
+const JapaneseQuiz =()=> {
 
-    return (
-        <Container fluid="true">
-            <Row id="katakana" >
-                <Katakana />
-            </Row>
-            <Row id="test" className="my-3">
-                <Test />
-            </Row>
-            <br /><br />
-            <Row id="grammar" className="my-3">
-                <Grammar />
-            </Row>
-        </Container>
+return(
+<Container fluid> 
+<section id="katakana">
+<Katakana />
+<br />
+<br />
+</section>
+<section id="test">
+<Test />
+<br />
+<br />  
+</section>
+<section id="grammar">
+<Grammar />
+<br />
+<br />
+</section>
+</Container>
 
-    )
-}
+)}
 
 export default JapaneseQuiz;

@@ -128,7 +128,6 @@ let contactform = (
 return ( 
     <div> 
     {contactform}
-    <br />
     </div>
  ) 
 }}
