@@ -1,0 +1,30 @@
+.kanji-div {
+    color: var(--blue);
+    padding: 5px;
+    display: flex;
+    float: left;
+    margin: 0px 15px;
+}
+
+.kanji-input {
+    justify-content: center;
+    margin: 20px;
+}
+
+.kanji {
+    font-size: 3rem;
+    float: left;
+    background-color: rgb(180, 180, 214, 0.3);
+    box-shadow: 5px 5px 2px grey;
+}
+
+.meanings,
+.kunyomi,
+.onyomi {
+    font-size: 1.2rem;
+}
+
+.kanji-container {
+    margin: auto;
+    width: 70%
+}
