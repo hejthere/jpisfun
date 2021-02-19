@@ -1,60 +1,122 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Image from 'react-bootstrap/Image';
-import Greeting from '../../Picture/greeting.png'
-import food from '../../Picture/food.png'
-import disease from '../../Picture/disease.png'
-import fuji from '../../Picture/fuji.png'
-import daruma from '../../Picture/daruma.png'
-import './home.css'
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Col, Row, Image, Button } from "react-bootstrap";
+import Greeting from "../../Picture/greeting.png";
+import food from "../../Picture/food.png";
+import disease from "../../Picture/disease.png";
+import fuji from "../../Picture/fuji.png";
+import daruma from "../../Picture/daruma.png";
 
+const home = (props) => {
+	// Banners
+	const banners = [
+		{
+			colCls: "menu-col px-3 bg-blue",
+			redirection: "/quiz",
+			imageSrc: Greeting,
+			imageAlt: "greeting",
+			text: "Quiz",
+		},
+		{
+			colCls: "menu-col px-3 bg-yellow-500",
+			redirection: "/disease",
+			imageSrc: disease,
+			imageAlt: "disease",
+			text: "Vocabulary",
+		},
+		{
+			colCls: "menu-col px-3 bg-red",
+			redirection: "/resources",
+			imageSrc: food,
+			imageAlt: "food",
+			text: "Resources",
+		},
+	];
 
-const home = props => {
+	const Banners = banners.map((banner, index) => (
+		<Col className={banner.colCls} key={`banner-${index}`}>
+			<Link className="picturelink" to={banner.redirection}>
+				<div className="subpagelink-wrapper">
+					<Image
+						className="subpagelink"
+						src={banner.imageSrc}
+						alt={banner.imageAlt}
+					/>
+				</div>
+				<h5 className="subpagelinkword">{banner.text}</h5>
+			</Link>
+		</Col>
+	));
 
-return (
-<div>
-<Row xs={1} sm={1} md={3} lg={3} fluid='true' className="menu"> 
-<Col className="menu-col"style={{ backgroundColor:'#496D89'}} >
-	<Link className="picturelink" to='/quiz'>
-		<Image className="subpagelink" src={Greeting} alt='greeting' /> <h5 className="subpagelinkword"> &nbsp; Quiz </h5> </Link>
- </Col>
- <Col className="menu-col" style={{ backgroundColor:'#ffcc00'}}>
-	<Link className="picturelink" to='/vocaburary'>
-		<Image className="subpagelink" src ={disease} alt='disease'/> <h5 className="subpagelinkword"> &nbsp; Vocaburary </h5></Link>
- </Col>
-<Col className="menu-col" style={{ backgroundColor:'#aa5939'}}> 
-	<Link  className="picturelink" to='/resources'>
-		<Image src ={food} className="subpagelink" alt='food' /> <h5 className="subpagelinkword"> &nbsp; Resources </h5></Link>
-</Col> 
-</Row>
+	// Sections
+	const sections = [
+		{
+			wrapperCls: "homepage-section bg-yellow-100",
+			title: "For Japanese Beginners",
+			subtitle:
+				"You could learn some basic Japanese Vocabulary and Grammar Practice in this website.",
+			imgSrc: fuji,
+			imgAlt: "FujiMountain",
+			imgAttrs: {
+				aos: "fade-in",
+				aosDelay: "300",
+			},
+			button: "MORE",
+			redirection: "/katakana",
+			isDisabled: true,
+		},
+		{
+			wrapperCls: "homepage-section bg-blue-100 flex-row-reverse",
+			title: "Japanese Vocabulary",
+			subtitle: "Learn Daily Japanese Vocabulary with Exercise and Audio.",
+			imgSrc: daruma,
+			imgAlt: "Daruma",
+			imgAttrs: {
+				aos: "zoom-in",
+				aosDelay: "500",
+				duration: "1000",
+			},
+			button: "MORE",
+			redirection: "/katakana",
+			isDisabled: true,
+		},
+	];
 
-{/* / <!-- Introduction --> // */}
-<Container fluid='true' className="simple-introduction">
-<Image src={fuji} alt="FujiMountain" data-aos="fade-in" data-aos-delay="300" />
-<div>
-<h2> For Japanese Beginners </h2>
-<span> You could learn some basic Japanese Vocaburary and Grammar Practice in this website.</span><br />
-<br /><Link to='/katakana'>
-	<Button>MORE</Button></Link>
-</div>
-</Container> 
+	const Sections = sections.map((section, index) => (
+		<div className={section.wrapperCls} key={`section-${index}`}>
+			<Image
+				src={section.imgSrc}
+				alt={section.imgAlt}
+				data-aos={section.imgAttrs?.aos}
+				data-aos-delay={section.imgAttrs?.delay}
+				data-aos-duration={section.imgAttrs?.duration}
+			/>
+			<div>
+				<h2> {section.title} </h2>
+				<p> {section.subtitle} </p>
+				<Link to={section.redirection}>
+					<Button disabled={section.redirection}> {section.button} </Button>
+				</Link>
+			</div>
+		</div>
+	));
 
-{/* /* <!-- Japanese Vocab --> */ }
+	return (
+		<div>
+			<Row
+				xs={1}
+				sm={1}
+				md={3}
+				lg={3}
+				fluid="true"
+				className="menu"
+				children={Banners}
+			/>
+			{Sections.map((Section) => (
+				<Container fluid="true" children={Section} />
+			))}
+		</div>
+	);
+};
 
-<Container  fluid='true' className="homepage-japan-vocab">
-	<div>
-	<h2> Japanese Vocaburary </h2>
-	<span> Learn Daily Japanese Vocaburary with Exercise and Audio. </span><br/><br/>
-	<Button>MORE</Button>
-	</div>
-	<Image src={daruma} alt="Daruma" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" />
- </Container> 
- </div>
-
-    );};
-
-export default home; 
+export default home;
