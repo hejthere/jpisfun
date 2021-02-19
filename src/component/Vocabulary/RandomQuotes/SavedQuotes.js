@@ -15,6 +15,7 @@ const SavedQuotes = () => {
 
     displayQuotes = storedQuotes.map(quote => {
         return (<Quotes
+            key={quote.english}
             japaneseQuote={quote.japanese}
             englishQuote={quote.english}
             authorQuote={quote.author}
