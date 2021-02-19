@@ -1,24 +1,22 @@
-.katakana-container{ 
-background-color: #f0f0ee4d;
-width:150px;
-box-shadow: 3px 5px rgb(187, 184, 184);
-margin: auto;
+.katakana-container {
+    background-color: #f0f0ee4d;
+    width: 150px;
+    box-shadow: 3px 5px rgb(187, 184, 184);
+    margin: auto;
 }
 
-.katakana-question{
-font-size: 5rem;
-color: var(--blue);
-padding: 10px;
- }
+.katakana-question {
+    font-size: 5rem;
+    color: var(--blue);
+    padding: 10px;
+}
 
 .katakana-button {
-padding: 10px;
-margin: 0px 10px;
+    padding: 10px;
+    margin: 0px 10px;
 }
 
-.katakana-introduction {
-background-color: var(--yellow);
-color:white;
-width:100%;
-padding: 15px;
+.katakana-header {
+    font-weight: 900;
+    text-decoration: underline;
 }

@@ -8,10 +8,12 @@ import Home from './component/Home/Home'
 import Test from './component/JapaneseQuiz/Test/Test'
 import './index.css';
 import './App.css';
-import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
-import Contact from './component/Contact/Contact'
+import Home from './component/Home/Home'
+import NavBar from './component/Home/NavBar';
 import Banner from './component/Home/Banner'
-import VocabDiseases from './component/Vocaburary/VocabDiseases';
+import Jptest from './component/JapaneseQuiz/JpTest/Jptest'
+import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
+import VocabDiseases from './component/Vocabulary/VocabDiseases/VocabDiseases';
 import OtherResources from './component/Resources/OtherResources';
 import RandomQuote from './component/Vocaburary/RandomQuote';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +23,13 @@ import miseimage from '../src/Picture/mise.jpg';
 import Katakana from './component/JapaneseQuiz/Katakana/Katakana';
 import SavedQuotes from './component/Vocaburary/SavedQuotes';
 import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
-import Vocaburary from './component/Vocaburary/Vocaburary';
+import Vocabulary from './component/Vocabulary/Vocabulary';
+import Kanji from './component/Vocabulary/Kanji/Kanji';
+import Footer from './component/Home/Footer';
+import Contact from './component/Contact/Contact';
+import towerimgage from '../src/Picture/fuji.jpg'
+import miseimage from '../src/Picture/mise.jpg';
+
 
 class App extends Component {
 
