@@ -2,7 +2,7 @@
     font-size: 1.5rem;
     color: var(--red);
     text-align: left;
-    padding: 10px 40px;
+    margin: 10px 50px 10px 50px;
 }
 
 .video-button-container {
@@ -25,4 +25,6 @@
 
 .video-container {
     min-height: 400px;
+    display: flex;
+    align-items: center;
 }

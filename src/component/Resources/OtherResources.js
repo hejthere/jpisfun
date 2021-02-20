@@ -46,16 +46,10 @@ class OtherResources extends Component {
                     <Col>
                         <p className='introductionResource'>
                             Select an video to watch</p>
-                        <div className='video-button-container'>
-                            {playButton}
-                        </div>
+                        {playButton}
+
                     </Col>
-                    <Col>
-                        <br />
-                        <br />
-                        {videoFrame}
-                    </Col>
-                    <br />
+                    <Col className='video-container' children={videoFrame} />
                 </Row>
             </Container>
 

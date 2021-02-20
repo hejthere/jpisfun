@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Col, Row, Image, Button } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import Greeting from "../../Picture/greeting.png";
 import food from "../../Picture/food.png";
 import disease from "../../Picture/disease.png";
@@ -57,13 +60,7 @@ const home = (props) => {
 				"You could learn some basic Japanese Vocabulary and Grammar Practice in this website.",
 			imgSrc: fuji,
 			imgAlt: "FujiMountain",
-			imgAttrs: {
-				aos: "fade-in",
-				aosDelay: "300",
-			},
-			button: "MORE",
-			redirection: "/katakana",
-			isDisabled: true,
+
 		},
 		{
 			wrapperCls: "homepage-section bg-blue-100 flex-row-reverse",
@@ -71,14 +68,6 @@ const home = (props) => {
 			subtitle: "Learn Daily Japanese Vocabulary with Exercise and Audio.",
 			imgSrc: daruma,
 			imgAlt: "Daruma",
-			imgAttrs: {
-				aos: "zoom-in",
-				aosDelay: "500",
-				duration: "1000",
-			},
-			button: "MORE",
-			redirection: "/katakana",
-			isDisabled: true,
 		},
 	];
 
@@ -87,16 +76,10 @@ const home = (props) => {
 			<Image
 				src={section.imgSrc}
 				alt={section.imgAlt}
-				data-aos={section.imgAttrs?.aos}
-				data-aos-delay={section.imgAttrs?.delay}
-				data-aos-duration={section.imgAttrs?.duration}
 			/>
 			<div>
 				<h2> {section.title} </h2>
 				<p> {section.subtitle} </p>
-				<Link to={section.redirection}>
-					<Button disabled={section.redirection}> {section.button} </Button>
-				</Link>
 			</div>
 		</div>
 	));

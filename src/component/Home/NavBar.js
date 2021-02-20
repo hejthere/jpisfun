@@ -21,8 +21,7 @@ export default function NavBar() {
                             <FontAwesomeIcon className='mx-2' icon={faVial} />
                             Quiz</span>} id="nav-dropdown">
                             <NavDropdown.Item eventKey="1.1"><Link to="/quiz/katakana">(Level 1) Katakana Test</Link></NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.2"><Link to="/quiz/test">(Level 2) Greetings</Link></NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 3) Grammar Practice</Link></NavDropdown.Item>
+                            <NavDropdown.Item eventKey="1.3"><Link to="/quiz/grammar">(Level 2) Grammar Practice</Link></NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={<span>
                             <FontAwesomeIcon className='mx-2' icon={faPencilAlt} />

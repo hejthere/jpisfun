@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Button, Spinner } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import './Kanji.css'
 
 const Kanji = () => {

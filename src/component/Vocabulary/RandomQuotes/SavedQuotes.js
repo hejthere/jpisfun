@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Button, Row } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import Quotes from './Quotes';
 import './randomQuote.css'
 
