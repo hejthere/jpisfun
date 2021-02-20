@@ -5,7 +5,6 @@ import './App.css';
 import Home from './component/Home/Home'
 import NavBar from './component/Home/NavBar';
 import Banner from './component/Home/Banner'
-import Jptest from './component/JapaneseQuiz/JpTest/Jptest'
 import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
 import VocabDiseases from './component/Vocabulary/VocabDiseases/VocabDiseases';
 import OtherResources from './component/Resources/OtherResources';
@@ -42,7 +41,6 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/quiz" component={JapaneseQuiz} />
-          <Route path="/quiz/jptest" component={Jptest} />
           <Route path="/quiz/grammar" component={Grammar} />
           <Route path="/quiz/katakana" component={Katakana} />
 

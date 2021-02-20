@@ -8,5 +8,5 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
 
-ReactDOM.render(<BrowserRouter>  <React.StrictMode><App /> </React.StrictMode></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter> <React.StrictMode><App /> </React.StrictMode></BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();

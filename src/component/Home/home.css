@@ -72,13 +72,13 @@ a.picturelink {
     color: var(--blue);
 }
 
-.bannerContainer {
+.banner-container {
     position: relative;
-    height: auto;
 }
 
 .banner-image {
     width: 100%;
+    opacity: 0.5;
 }
 
 .footer-container {

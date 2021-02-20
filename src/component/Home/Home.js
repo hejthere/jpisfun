@@ -19,7 +19,7 @@ const home = (props) => {
 		},
 		{
 			colCls: "menu-col px-3 bg-yellow-500",
-			redirection: "/disease",
+			redirection: "/vocabulary",
 			imageSrc: disease,
 			imageAlt: "disease",
 			text: "Vocabulary",
