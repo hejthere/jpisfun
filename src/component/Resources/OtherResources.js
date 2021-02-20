@@ -4,8 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './OtherResources.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHandPointDown } from '@fortawesome/free-solid-svg-icons';
 
 
 class OtherResources extends Component {

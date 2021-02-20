@@ -2,166 +2,100 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/reboot";
-
- 
-
-
-
 // Color system
-
-$white:    #fff ;
-$gray-100: #f8f9fa ;
-$gray-200: #e9ecef ;
-$gray-300: #dee2e6 ;
-$gray-400: #ced4da ;
-$gray-500: #adb5bd ;
-$gray-600: #6c757d ;
-$gray-700: #495057 ;
-$gray-800: #343a40 ;
-$gray-900: #212529 ;
-$black:    #000 ;
-
-$grays: () ;
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
-
-$blue:    #496D89 ;
-$indigo:  #6610f2 ;
-$purple:  #6f42c1 ;
-$pink:    #e83e8c ;
-$red:     #dc3545 ;
-$orange:  #fd7e14 ;
-$yellow:  #ffc107 ;
-$green:   #28a745 ;
-$teal:    #20c997 ;
-$cyan:    #17a2b8 ;
-
-$colors: () ;
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
-  ),
-  $colors
-);
-
-$primary:       $blue ;
-$secondary:     $gray-600 ;
-$success:       $green ;
-$info:          $cyan ;
-$warning:       $yellow ;
-$danger:        $red ;
-$light:         $gray-100 ;
-$dark:          $gray-800 ;
-
-$theme-colors: () ;
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
-);
-
-$enable-responsive-font-sizes:                true;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+$grays: ();
+$grays: map-merge( ( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), $grays);
+$blue: #496D89;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$colors: ();
+$colors: map-merge( ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800), $colors);
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+$theme-colors: ();
+$theme-colors: map-merge( ( "primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark), $theme-colors);
+$enable-responsive-font-sizes: true;
 html {
     font-size: 1rem;
-  }
+}
 
-  
-  @include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {
     html {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  }
-  
-  
-  @include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(sm) {
     html {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
-  }
-  
-  @include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(md) {
     html {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  }
-  
-  @include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(lg) {
     html {
-      font-size: 1.3rem;
+        font-size: 1.3rem;
     }
-  }
+}
 
-  @include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xl) {
     html {
-      font-size: 1.4rem;
+        font-size: 1.4rem;
     }
-  }
+}
 
-
-  // Dropdown menu container and contents.
-
-$dropdown-min-width:                10rem ;
-$dropdown-padding-x:                0 ;
-$dropdown-padding-y:                .5rem ;
-$dropdown-spacer:                   .125rem ;
-$dropdown-font-size:                $font-size-base ;
-$dropdown-color:                    $body-color ;
-$dropdown-bg:                       $gray-800 ;
-$dropdown-border-color:             rgba($black, .15) ;
-$dropdown-border-radius:            0px ;
-$dropdown-border-width:             $border-width ;
-$dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) ;
-$dropdown-divider-bg:               $gray-200 ;
-$dropdown-divider-margin-y:         $nav-divider-margin-y ;
-$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) ;
-
-$dropdown-link-color:               $gray-200 ;
-$dropdown-link-hover-color:         darken($gray-900, 5%) ;
-$dropdown-link-hover-bg:            $gray-400 ;
-
-$dropdown-link-active-color:        $component-active-color ;
-$dropdown-link-active-bg:           $component-active-bg ;
-
-$dropdown-link-disabled-color:      $gray-600 ;
-
-$dropdown-item-padding-y:           .25rem ;
-$dropdown-item-padding-x:           1.5rem ;
-
-$dropdown-header-color:             $gray-600 ;
-$dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x ;
-
-
-
+// Dropdown menu container and contents.
+$dropdown-min-width: 10rem;
+$dropdown-padding-x: 0;
+$dropdown-padding-y: .5rem;
+$dropdown-spacer: .125rem;
+$dropdown-font-size: $font-size-base;
+$dropdown-color: $body-color;
+$dropdown-bg: $gray-800;
+$dropdown-border-color: rgba($black, .15);
+$dropdown-border-radius: 0px;
+$dropdown-border-width: $border-width;
+$dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width);
+$dropdown-divider-bg: $gray-200;
+$dropdown-divider-margin-y: $nav-divider-margin-y;
+$dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175);
+$dropdown-link-color: $gray-200;
+$dropdown-link-hover-color: darken($gray-900, 5%);
+$dropdown-link-hover-bg: $gray-400;
+$dropdown-link-active-color: $component-active-color;
+$dropdown-link-active-bg: $component-active-bg;
+$dropdown-link-disabled-color: $gray-600;
+$dropdown-item-padding-y: .25rem;
+$dropdown-item-padding-x: 1.5rem;
+$dropdown-header-color: $gray-600;
+$dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x;
 @import "node_modules/bootstrap/scss/bootstrap";

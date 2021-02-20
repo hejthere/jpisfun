@@ -5,13 +5,13 @@ import './App.css';
 import Home from './component/Home/Home'
 import NavBar from './component/Home/NavBar';
 import Banner from './component/Home/Banner'
-import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
+// import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
 import VocabDiseases from './component/Vocabulary/VocabDiseases/VocabDiseases';
 import OtherResources from './component/Resources/OtherResources';
 import RandomQuote from './component/Vocabulary/RandomQuotes/RandomQuote';
-import Katakana from './component/JapaneseQuiz/Katakana/Katakana';
+// import Katakana from './component/JapaneseQuiz/Katakana/Katakana';
 import SavedQuotes from './component/Vocabulary/RandomQuotes/SavedQuotes';
-import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
+// import JapaneseQuiz from './component/JapaneseQuiz/JapaneseQuiz';
 import Vocabulary from './component/Vocabulary/Vocabulary';
 import Kanji from './component/Vocabulary/Kanji/Kanji';
 import Footer from './component/Home/Footer';
@@ -40,9 +40,6 @@ class App extends Component {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/quiz" component={JapaneseQuiz} />
-          <Route path="/quiz/grammar" component={Grammar} />
-          <Route path="/quiz/katakana" component={Katakana} />
 
           <Route path="/vocabulary" exact component={Vocabulary} />
           <Route path="/vocabulary/quotes" component={RandomQuote} />
