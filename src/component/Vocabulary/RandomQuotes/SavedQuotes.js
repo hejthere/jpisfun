@@ -1,13 +1,11 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 import Quotes from './Quotes';
 import './randomQuote.css'
 
 const SavedQuotes = () => {
-
-
-
 
     let storedQuotes = [];
     let displayQuotes = [];

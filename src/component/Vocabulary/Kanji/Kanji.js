@@ -74,8 +74,6 @@ const Kanji = () => {
         <Row>
           <div className='kanji-div onyomi'>音読み：{onyomi}</div>
         </Row>
-        <br />
-        <br />
       </Container>
     </Container>
   )

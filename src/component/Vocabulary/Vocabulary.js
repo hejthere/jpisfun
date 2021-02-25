@@ -10,7 +10,6 @@ const Vocabulary = () => {
         {
             page: <Kanji />,
             id: 'kanji'
-
         },
         {
             page: <RandomQuote />,

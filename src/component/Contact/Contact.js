@@ -5,7 +5,7 @@ import FormElement from './FormElement';
 class Contact extends Component {
 
     state = {
-        contactform: {
+        contactForm: {
             Title: {
                 elementType: 'select',
                 elementConfig: {
@@ -20,7 +20,6 @@ class Contact extends Component {
                     required: true,
 
                 },
-                isValid: false
             },
 
             Name: {
@@ -34,7 +33,6 @@ class Contact extends Component {
                     required: true,
 
                 },
-                isValid: false,
                 touched: false,
 
             },
@@ -69,18 +67,17 @@ class Contact extends Component {
 
     //Handler 
 
-    onChangeHandler = (event, keyname) => {
-        const updatedForm = { ...this.state.contactform };
+    onChangeHandler = (event, keyName) => {
+        const updatedForm = { ...this.state.contactForm };
         const updatedFormElement = {
-            ...updatedForm[keyname]
+            ...updatedForm[keyName]
         }
         updatedFormElement.value = event.target.value;
         updatedFormElement.isValid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
 
-        updatedForm[keyname] = updatedFormElement;
-        console.log(updatedFormElement);
-        this.setState({ contactform: updatedForm });
+        updatedForm[keyName] = updatedFormElement;
+        this.setState({ contactForm: updatedForm });
     }
 
 
@@ -102,26 +99,27 @@ class Contact extends Component {
 
 
     render() {
-        const contactfromArray = [];
-        for (let key in this.state.contactform) {
-            contactfromArray.push({
+        const contactFromArray = [];
+        for (let key in this.state.contactForm) {
+            contactFromArray.push({
                 id: key,
-                value: this.state.contactform[key]
+                value: this.state.contactForm[key]
             })
         }
 
-        let contactform = (
+        let contactForm = (
             <form>
-                {contactfromArray.map(formElement => (
+                {contactFromArray.map(formElement => (
                     <FormElement
                         key={formElement.id}
                         elementConfig={formElement.value.elementConfig}
                         label={formElement.id}
                         elementType={formElement.value.elementType}
                         value={formElement.value.value}
-                        invalid={formElement.value.isValid}
+                        isValid={formElement.value.isValid}
                         change={(event) => this.onChangeHandler(event, formElement.id)}
                         touched={formElement.value.touched}
+
                     />))}
                 <br />
                 <Button onClick={this.submitHandler} className="submitButton">Submit</Button>
@@ -131,7 +129,7 @@ class Contact extends Component {
 
         return (
             <div>
-                {contactform}
+                {contactForm}
                 <br />
             </div>
         )

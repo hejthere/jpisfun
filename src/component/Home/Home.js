@@ -41,12 +41,12 @@ const home = (props) => {
 			<Link className="picturelink" to={banner.redirection}>
 				<div className="subpagelink-wrapper">
 					<Image
-						className="subpagelink"
+						className="subpage-img"
 						src={banner.imageSrc}
 						alt={banner.imageAlt}
 					/>
 				</div>
-				<h5 className="subpagelinkword">{banner.text}</h5>
+				<h5 className="subpagelinkword mx-3">{banner.text}</h5>
 			</Link>
 		</Col>
 	));
