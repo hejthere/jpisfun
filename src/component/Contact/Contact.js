@@ -37,7 +37,7 @@ class Contact extends Component {
 
             },
             Email: {
-                elementType: 'email',
+                elementType: 'input',
                 elementConfig: {
                     type: 'email',
                     placeholder: 'Your email'

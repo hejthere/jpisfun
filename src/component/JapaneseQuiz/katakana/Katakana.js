@@ -108,7 +108,7 @@ class Katakana extends Component {
 
 
         return (
-            <Container fluid="true" className="w-100">
+            <Container fluid="true" className="w-100 mb-3">
                 <Row fluid="true">
                     <h5 className='title-bar bg-yellow'>
                         Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5></Row>

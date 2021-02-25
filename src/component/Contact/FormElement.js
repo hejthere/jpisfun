@@ -24,20 +24,6 @@ const FormElement = props => {
                 </Form.Group>
             break;
 
-        case 'email':
-            formElement =
-                <Form.Group>
-                    <Form.Label>{props.label}</Form.Label>
-                    <Form.Control
-                        className={elementClass.join(' ')}
-                        value={props.value}
-                        {...props.elementConfig}
-                        onChange={props.change}
-                    >
-                    </Form.Control>
-                </Form.Group>
-            break;
-
         case 'select':
             formElement = (
                 <Form.Group>

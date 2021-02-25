@@ -54,7 +54,7 @@ const Kanji = () => {
   }
 
   return (
-    <Container fluid="true">
+    <Container fluid="true" className="mb-3">
       <h3 className='title-bar bg-yellow'>Kanji Dictionary</h3>
       <Container className='kanji-container'>
         <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Search Kanji' value={typeKanji} />
