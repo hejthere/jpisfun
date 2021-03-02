@@ -29,10 +29,10 @@ const home = (props) => {
 		},
 		{
 			colCls: "menu-col px-3 bg-red",
-			redirection: "/resources",
+			redirection: "/vocabulary/quotes",
 			imageSrc: food,
 			imageAlt: "food",
-			text: "Resources",
+			text: "Quote of Today",
 		},
 	];
 
@@ -74,6 +74,7 @@ const home = (props) => {
 	const Sections = sections.map((section, index) => (
 		<div className={section.wrapperCls} key={`section-${index}`}>
 			<Image
+				className='mx-3'
 				src={section.imgSrc}
 				alt={section.imgAlt}
 			/>

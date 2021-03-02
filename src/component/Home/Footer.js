@@ -11,7 +11,7 @@ import '../../App.css'
 export default function Footer() {
     return (
         <Container fluid="true" className='footer-container'>
-            <Row xs={2} sm={3} lg={3} xl={3} className='p-2 px-5'>
+            <Row xs={1} sm={3} lg={3} xl={3} className='p-2 px-5'>
                 <Col className='text-left'>
                     <h3 className='homepage-brand'>Hejthere</h3>
                     <p>©2021 Hejthere Hong Kong</p>

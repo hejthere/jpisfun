@@ -27,12 +27,11 @@ export default function NavBar() {
                             <FontAwesomeIcon className='mx-2' icon={faPencilAlt} />
                             Vocabulary</span>} id="nav-dropdown">
                             <NavDropdown.Item eventKey="2.1"><Link to='/vocabulary/kanji'>Kanji</Link></NavDropdown.Item>
-                            <NavDropdown.Item eventKey="2.2"><Link to='/vocabulary/quotes'>Quotes of Today</Link></NavDropdown.Item>
                             <NavDropdown.Item eventKey="2.3"><Link to="/vocabulary/vocabdiseases">Diseases</Link></NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link className='nav-link' href='/resources'>
+                        <Nav.Link className='nav-link' href='/vocabulary/quotes'>
                             <FontAwesomeIcon className='mx-2' icon={faGlasses} />
-                            Resources</Nav.Link>
+                            Quote of Today</Nav.Link>
                         <Nav.Link className='nav-link' href='/contactus'>
                             <FontAwesomeIcon className='mx-2' icon={faAddressBook} />
                             Contact Us</Nav.Link>

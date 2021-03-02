@@ -7,7 +7,6 @@ import NavBar from './component/Home/NavBar';
 import Banner from './component/Home/Banner'
 import Grammar from './component/JapaneseQuiz/Grammar/Grammar';
 import VocabDiseases from './component/Vocabulary/VocabDiseases/VocabDiseases';
-import OtherResources from './component/Resources/OtherResources';
 import RandomQuote from './component/Vocabulary/RandomQuotes/RandomQuote';
 import Katakana from './component/JapaneseQuiz/katakana/Katakana';
 import SavedQuotes from './component/Vocabulary/RandomQuotes/SavedQuotes';
@@ -51,7 +50,6 @@ class App extends Component {
           <Route path="/quiz/grammar" component={Grammar} />
 
 
-          <Route path="/resources" component={OtherResources} />
           <Route path="/contactus" component={Contact} />
 
           {/* default */}
