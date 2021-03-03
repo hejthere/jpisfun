@@ -18,6 +18,7 @@ class Contact extends Component {
                 value: '',
                 validation: {
                     required: true,
+                    isValid: false
 
                 },
             },
@@ -34,6 +35,7 @@ class Contact extends Component {
 
                 },
                 touched: false,
+                isValid: false
 
             },
             Email: {
@@ -47,6 +49,7 @@ class Contact extends Component {
                     required: true,
 
                 }, touched: false,
+                isValid: false
             },
             Message: {
                 elementType: 'input',
@@ -59,10 +62,11 @@ class Contact extends Component {
                     required: true,
 
                 }, touched: false,
+                isValid: false
             }
 
-
-        }
+        },
+        isValidated: true
     }
 
     //Handler 
@@ -76,13 +80,17 @@ class Contact extends Component {
         updatedFormElement.isValid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
 
+        if (!updatedFormElement.isValid) {
+            this.setState({ isValidated: false })
+        }
+
         updatedForm[keyName] = updatedFormElement;
         this.setState({ contactForm: updatedForm });
     }
 
 
     checkValidity = (value, rules) => {
-        let isValid = true;   // set true first and then set it false 
+        let isValid = true;
         if (!rules) {
             return true
         }
@@ -94,7 +102,14 @@ class Contact extends Component {
 
     submitHandler = (e) => {
         e.preventDefault();
-        alert('Thank you for your message. We will contact you soon!')
+        if (this.state.isValidated) {
+            alert('Thank you for your message. We will contact you soon!')
+        }
+        else {
+            alert('Please fill in the required information')
+        }
+
+
     }
 
 
@@ -119,7 +134,6 @@ class Contact extends Component {
                         isValid={formElement.value.isValid}
                         change={(event) => this.onChangeHandler(event, formElement.id)}
                         touched={formElement.value.touched}
-
                     />))}
                 <br />
                 <Button onClick={this.submitHandler} className="submitButton">Submit</Button>

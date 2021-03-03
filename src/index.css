@@ -17,6 +17,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
     align-items: center;

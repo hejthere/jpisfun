@@ -11,26 +11,25 @@ import '../../App.css'
 export default function Footer() {
     return (
         <Container fluid="true" className='footer-container'>
-            <Row xs={1} sm={3} lg={3} xl={3} className='p-2 px-5'>
+            <Row xs={1} sm={3} lg={3} xl={3} className='px-5'>
                 <Col className='text-left'>
-                    <h3 className='homepage-brand'>Hejthere</h3>
-                    <p>©2021 Hejthere Hong Kong</p>
+                    <h3 className='homepage-brand my-2'>Hejthere</h3>
                 </Col>
 
-                <Col className='d-flex justify-content-center'>
+                <Col className='d-flex my-2'>
                     <div>
                         <h5 className="text-left"><b>Contact Us</b></h5>
-                        <div className="text-left">
-                            <FontAwesomeIcon icon={faPhoneAlt} /> (+852) 1234 5678<br />
-                            <FontAwesomeIcon icon={faEnvelope} /> abd@abc.com
-                        </div></div> </Col>
+                        <FontAwesomeIcon icon={faPhoneAlt} /> (+852) 1234 5678<br />
+                        <FontAwesomeIcon icon={faEnvelope} /> connie0380@.com
+                        </div></Col>
 
-                <Col className='text-center'>
+                <Col className='text-left my-2'>
                     <h5><b>Social Media</b></h5>
                     <div>
-                        <FontAwesomeIcon icon={faFacebook} size='2x' /> &nbsp;
-                        <FontAwesomeIcon icon={faInstagram} size='2x' /> &nbsp;
-                        <FontAwesomeIcon icon={faTwitter} size='2x' /> &nbsp;
+                        <FontAwesomeIcon icon={faFacebook} size='2x' />&nbsp;
+                        <FontAwesomeIcon icon={faInstagram} size='2x' />&nbsp;
+                        <FontAwesomeIcon icon={faTwitter} size='2x' />&nbsp;
+                        <p>©2021 Hejthere Hong Kong</p>
                     </div>
                 </Col>
             </Row>

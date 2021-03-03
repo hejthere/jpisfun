@@ -29,7 +29,7 @@ export default function RandomQuote() {
 
 
     useEffect(() => {
-        setIsDisplayQuote(false)
+        !(JSON.parse(localStorage.getItem('savedQuotes'))) && setIsDisplayQuote(false)
         setSavedQuotes(JSON.parse(localStorage.getItem('savedQuotes')))
     }, [])
 
@@ -42,12 +42,9 @@ export default function RandomQuote() {
         setIsDisplayQuote(true);
     }
 
-
-
     const saveQuoteHandler = () => {
         if (canSaveQuote) {
-            const quoteArray = [...savedQuotes];
-            quoteArray.push(generatedQuote);
+            const quoteArray = [...savedQuotes, generatedQuote];
             setSavedQuotes(quoteArray);
             alert('Quote Saved!');
             localStorage.setItem('savedQuotes', JSON.stringify(quoteArray));
@@ -69,7 +66,7 @@ export default function RandomQuote() {
             <Button className={canSaveQuote ? "" : "disabled"} onClick={saveQuoteHandler}>Save Quote</Button>
             <br />
             <br />
-            {savedQuotes.length > 0 && <Button><Link to="/vocabulary/savedquotes"> View Saved Quotes</Link></Button>}
+            {savedQuotes !== null && <Button><Link to="/vocabulary/savedquotes"> View Saved Quotes</Link></Button>}
             <br />
             <br />
         </Container>

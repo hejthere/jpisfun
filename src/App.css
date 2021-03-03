@@ -57,3 +57,11 @@
 .bg-blue-100 {
     background: var(--blue-100);
 }
+
+.content-wrapper {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
