@@ -29,34 +29,32 @@ class App extends Component {
     return (
 
       <div>
-        <div id='content-wrapper'>
-          <NavBar />
-          <Switch>
-            <Route path="/" exact render={(props) => (
-              <Banner  {...props} backgrounds={towerimgage} />)} />
-            <Route render={(props) => (
-              <Banner  {...props} backgrounds={miseimage} />)} />
-          </Switch>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact render={(props) => (
+            <Banner  {...props} backgrounds={towerimgage} />)} />
+          <Route render={(props) => (
+            <Banner  {...props} backgrounds={miseimage} />)} />
+        </Switch>
 
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/vocabulary" exact component={Vocabulary} />
-            <Route path="/vocabulary/quotes" component={RandomQuote} />
-            <Route path="/vocabulary/vocabdiseases" component={VocabDiseases} />
-            <Route path="/vocabulary/savedquotes" component={SavedQuotes} />
-            <Route path="/vocabulary/kanji" component={Kanji} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/vocabulary" exact component={Vocabulary} />
+          <Route path="/vocabulary/quotes" component={RandomQuote} />
+          <Route path="/vocabulary/vocabdiseases" component={VocabDiseases} />
+          <Route path="/vocabulary/savedquotes" component={SavedQuotes} />
+          <Route path="/vocabulary/kanji" component={Kanji} />
 
-            <Route path="/quiz" exact component={JapaneseQuiz} />
-            <Route path="/quiz/katakana" component={Katakana} />
-            <Route path="/quiz/grammar" component={Grammar} />
+          <Route path="/quiz" exact component={JapaneseQuiz} />
+          <Route path="/quiz/katakana" component={Katakana} />
+          <Route path="/quiz/grammar" component={Grammar} />
 
 
-            <Route path="/contactus" component={Contact} />
+          <Route path="/contactus" component={Contact} />
 
-            {/* default */}
-            <Route component={Home} />
-          </Switch>
-        </div>
+          {/* default */}
+          <Route component={Home} />
+        </Switch>
         <Footer />
       </div>
     )
