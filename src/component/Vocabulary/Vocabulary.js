@@ -12,10 +12,6 @@ const Vocabulary = () => {
             id: 'kanji'
         },
         {
-            page: <RandomQuote />,
-            id: 'randomQuote'
-
-        }, {
             page: <VocabDiseases />,
             id: 'vocabDiseases'
         },

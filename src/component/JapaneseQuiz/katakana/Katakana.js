@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './katakana.css';
-import Button from 'react-bootstrap/Button';
+import { Button } from '../../Reusable/Button'
+    ;
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -94,9 +95,9 @@ class Katakana extends Component {
                             return (
                                 <Button
                                     key={option}
-                                    className='katakana-button'
-                                    onClick={this.answerHandler2}>
-                                    {option}
+                                    buttonSize='btn-small'
+                                    onClick={this.answerHandler2} >
+                                    { option}
                                 </Button>)
                         }))
                     }
@@ -111,7 +112,7 @@ class Katakana extends Component {
             <Container fluid="true" className="w-100 mb-3">
                 <Row fluid="true">
                     <h5 className='title-bar bg-yellow'>
-                        Level 1: Do you know the pronunciation of the following Hirakana or katakana ? </h5></Row>
+                        Level 1: Do you know the pronunciation of the following Hirakana and Katakana ? </h5></Row>
                 <Row xs={1} sm={1} md={2} xl={2}>
                     {quizBoxContent}
                 </Row>

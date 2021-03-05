@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
+import { Button } from '../../Reusable/Button'
+  ;
 import Spinner from 'react-bootstrap/Spinner';
 import './Kanji.css'
 
@@ -58,7 +59,7 @@ const Kanji = () => {
       <h3 className='title-bar bg-yellow'>Kanji Dictionary</h3>
       <Container className='kanji-container'>
         <Row className='kanji-input'><input onChange={kanjiOnChangeHandler} id='searchKanji' placeholder='Search Kanji' value={typeKanji} />
-          <Button onClick={searchKanjiHandler}>Check</Button> </Row>
+          <Button onClick={searchKanjiHandler}>Search</Button> </Row>
         {loading &&
           <Spinner animation="border" role="status">
             <span className="sr-only">Loading...</span>

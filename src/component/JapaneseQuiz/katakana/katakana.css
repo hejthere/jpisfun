@@ -11,16 +11,6 @@
     padding: 10px;
 }
 
-.katakana-button {
-    padding: 10px;
-    margin: 0px 10px;
-}
-
-.katakana-button2 {
-    padding: 10px;
-    margin: 0px 10px;
-}
-
 .katakana-introduction {
     background-color: var(--yellow);
     color: white;

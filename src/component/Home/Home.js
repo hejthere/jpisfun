@@ -57,7 +57,7 @@ const home = (props) => {
 			wrapperCls: "homepage-section bg-yellow-100",
 			title: "For Japanese Beginners",
 			subtitle:
-				"You could learn some basic Japanese Vocabulary and Grammar Practice in this website.",
+				"Try and challenge the Japanese Quiz !",
 			imgSrc: fuji,
 			imgAlt: "FujiMountain",
 
@@ -65,7 +65,7 @@ const home = (props) => {
 		{
 			wrapperCls: "homepage-section bg-blue-100 flex-row-reverse",
 			title: "Japanese Vocabulary",
-			subtitle: "Learn Daily Japanese Vocabulary with Exercise and Audio.",
+			subtitle: "Learn Basic Japanese words with Picture and Audio.",
 			imgSrc: daruma,
 			imgAlt: "Daruma",
 		},

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Button } from '../../Reusable/Button';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
@@ -30,7 +30,7 @@ export default function RandomQuote() {
 
     useEffect(() => {
         !(JSON.parse(localStorage.getItem('savedQuotes'))) && setIsDisplayQuote(false)
-        setSavedQuotes(JSON.parse(localStorage.getItem('savedQuotes')))
+        setSavedQuotes(JSON.parse(localStorage.getItem('savedQuotes')) || [])
     }, [])
 
 
@@ -54,7 +54,7 @@ export default function RandomQuote() {
 
     return (
         <Container fluid="true">
-            <Row><h4 className="title-bar bg-blue">Try and Get a random Ghibli Quote!</h4></Row>
+            <Row><h4 className="title-bar bg-blue">Get a random Ghibli Quote!</h4></Row>
             { isDisplayQuote && <Quotes
                 japaneseQuote={generatedQuote.japanese}
                 englishQuote={generatedQuote.english}
@@ -66,10 +66,10 @@ export default function RandomQuote() {
             <Button className={canSaveQuote ? "" : "disabled"} onClick={saveQuoteHandler}>Save Quote</Button>
             <br />
             <br />
-            {savedQuotes !== null && <Button><Link to="/vocabulary/savedquotes"> View Saved Quotes</Link></Button>}
+            {savedQuotes.length > 0 && <Button href="/vocabulary/savedquotes"> See Saved Quotes</Button>}
             <br />
             <br />
-        </Container>
+        </Container >
     )
 }
 
