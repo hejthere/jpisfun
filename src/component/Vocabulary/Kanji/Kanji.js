@@ -9,9 +9,9 @@ import './Kanji.css'
 const Kanji = () => {
 
   const [kanji, setKanji] = useState();
-  const [meanings, setMeanings] = useState();
-  const [kunyomi, setKunyomi] = useState();
-  const [onyomi, setOnyomi] = useState();
+  const [meanings, setMeanings] = useState('');
+  const [kunyomi, setKunyomi] = useState('');
+  const [onyomi, setOnyomi] = useState('');
   const [typeKanji, setTypeKanji] = useState();
   const [inputKanji, setInputKanji] = useState('例');
   const [loading, setLoading] = useState(false);
@@ -36,6 +36,7 @@ const Kanji = () => {
         setMeanings('/')
         setKunyomi('/')
         setOnyomi('/')
+        setLoading(false)
       }, [inputKanji])
   })
 
@@ -54,6 +55,38 @@ const Kanji = () => {
     }
   }
 
+  const resultContent = [
+    {
+      type: 'kanji',
+      label: '',
+      content: kanji
+    },
+    {
+      type: 'meanings',
+      label: 'Meanings:',
+      content: meanings
+    },
+    {
+      type: 'kunyomi',
+      label: '訓読み:',
+      content: kunyomi
+
+    },
+    {
+      type: 'onyomi',
+      label: '音読み:',
+      content: onyomi
+    },
+  ]
+  const searchResult = resultContent.map(el => {
+    return (
+      <Row key={el.type}>
+        <div className={`kanji-div ${el.type}`}>
+          {el.label}{el.content}
+        </div></Row>
+    )
+  })
+
   return (
     <Container fluid="true" className="mb-3">
       <h3 className='title-bar bg-yellow'>Kanji Dictionary</h3>
@@ -64,20 +97,10 @@ const Kanji = () => {
           <Spinner animation="border" role="status">
             <span className="sr-only">Loading...</span>
           </Spinner>}
-
-        <Row>
-          <div className='kanji-div kanji'>{kanji}</div></Row>
-        <Row>
-          <div className='kanji-div meanings'>Meaning ：{meanings}</div>
-        </Row>
-        <Row>
-          <div className='kanji-div kunyomi'>訓読み：{kunyomi}</div></Row>
-        <Row>
-          <div className='kanji-div onyomi'>音読み：{onyomi}</div>
-        </Row>
+        {searchResult}
       </Container>
     </Container>
   )
 }
 
-export default Kanji; 
+export default Kanji;

@@ -30,50 +30,35 @@ class Katakana extends Component {
     resetAnswerHandler = (e, isCorrect) => {
         if (isCorrect) {
             alert('correct!');
-            let button = document.getElementsByClassName('katakana-button');
+            var button = document.querySelectorAll("#katakana-button")
             var i;
             for (i = 0; i < button.length; i++) {
+                button[i].style.color = 'var(--blue)';
                 button[i].style.border = '2px solid var(--blue)';
-                button[i].style.color = 'white';
             }
         } else {
-            e.target.style.color = 'red'
-            e.target.style.border = '2px solid red'
+            e.target.style.color = 'var(--red)';
+            e.target.style.border = '5px solid var(--red)';
         }
     }
 
-    answerHandler = (e) => {
-        if (e.target.innerHTML === this.state.quizCard[0].displayAnswer) {
+    answerHandler = (e, index) => {
+        if (e.target.innerHTML === this.state.quizCard[index].displayAnswer) {
             let randomNumber = Math.floor(Math.random() * 10);
             const updatedQuizCard = [...this.state.quizCard]
-            updatedQuizCard[0].displayQuestion = this.state.question[randomNumber].hirakana
-            updatedQuizCard[0].displayOption = this.state.question[randomNumber].option
-            updatedQuizCard[0].displayAnswer = this.state.question[randomNumber].answer
+            updatedQuizCard[index].displayQuestion = this.state.question[randomNumber].hirakana
+            updatedQuizCard[index].displayOption = this.state.question[randomNumber].option
+            updatedQuizCard[index].displayAnswer = this.state.question[randomNumber].answer
             this.setState({ quizCard: updatedQuizCard })
             this.resetAnswerHandler(e, true)
         } else {
             this.resetAnswerHandler(e, false)
         }
     }
-
-    answerHandler2 = (e) => {
-        if (e.target.innerHTML === this.state.quizCard[1].displayAnswer) {
-            let randomNumber = Math.floor(Math.random() * 10);
-            const updatedQuizCard = [...this.state.quizCard]
-            updatedQuizCard[1].displayQuestion = this.state.question[randomNumber].katakana
-            updatedQuizCard[1].displayOption = this.state.question[randomNumber].option
-            updatedQuizCard[1].displayAnswer = this.state.question[randomNumber].answer
-            this.setState({ quizCard: updatedQuizCard })
-            this.resetAnswerHandler(e, true)
-        } else {
-            this.resetAnswerHandler(e, false)
-        }
-    }
-
 
     render() {
         let quizBoxContent = [];
-        quizBoxContent = this.state.quizCard.map(option => {
+        quizBoxContent = this.state.quizCard.map((option, index) => {
             return (
                 <Col key={option.id}>
                     <h5 className='katakana-header'>{option.title}</h5>
@@ -81,26 +66,16 @@ class Katakana extends Component {
                         <br />
                         <p className='katakana-question'>{option.displayQuestion}</p>
                     </div>
-                    { option.id === 101 ?
-                        (option.displayOption.map(option => {
+                    <div>
+                        {option.displayOption.map(option => {
                             return (
-                                <Button
+                                <button
                                     key={option}
-                                    className='katakana-button'
-                                    onClick={this.answerHandler}>
+                                    id='katakana-button'
+                                    onClick={(event) => this.answerHandler(event, index)}>
                                     {option}
-                                </Button>)
-                        })) :
-                        (option.displayOption.map(option => {
-                            return (
-                                <Button
-                                    key={option}
-                                    buttonSize='btn-small'
-                                    onClick={this.answerHandler2} >
-                                    { option}
-                                </Button>)
-                        }))
-                    }
+                                </button>)
+                        })}</div>
 
                     <br />
                 </Col >
@@ -109,7 +84,7 @@ class Katakana extends Component {
 
 
         return (
-            <Container fluid="true" className="w-100 mb-3">
+            <Container fluid="true" className="w-100 mb-3" >
                 <Row fluid="true">
                     <h5 className='title-bar bg-yellow'>
                         Level 1: Do you know the pronunciation of the following Hirakana and Katakana ? </h5></Row>

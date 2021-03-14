@@ -105,6 +105,7 @@ class Contact extends Component {
         e.preventDefault();
         if (this.state.isValidated) {
             alert('Thank you for your message. We will contact you soon!')
+
         }
         else {
             alert('Please fill in the required information')

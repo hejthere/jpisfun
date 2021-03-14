@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../../Reusable/Button';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Quotes from './Quotes'
 import './randomQuote.css';
 
@@ -26,6 +26,7 @@ export default function RandomQuote() {
     const [savedQuotes, setSavedQuotes] = useState([]);
     const [canSaveQuote, setCanSaveQuote] = useState(false);
     const [isDisplayQuote, setIsDisplayQuote] = useState(false);
+    const history = useHistory();
 
 
     useEffect(() => {
@@ -66,7 +67,7 @@ export default function RandomQuote() {
             <Button className={canSaveQuote ? "" : "disabled"} onClick={saveQuoteHandler}>Save Quote</Button>
             <br />
             <br />
-            {savedQuotes.length > 0 && <Button href="/vocabulary/savedquotes"> See Saved Quotes</Button>}
+            {savedQuotes.length > 0 && <Button onClick={() => { history.push('/vocabulary/savedquotes') }}> See Saved Quotes</Button>}
             <br />
             <br />
         </Container >
